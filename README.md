@@ -1,21 +1,17 @@
-Hack The Vote
+Hack The Vote 2016
 ===
+# Overview
 
-Hack The Vote lasted 48 hours and started on Nov 4th 2016 at 7pm EDT. We themed both the website and the challenges after the US election in the hopes of making a hilarious CTF, but also to draw some attention to the idea.
-
-We had a great time running the CTF and hanging out with the teams on IRC, and we loved all the positive feedback on CTFtime. Thank you to all the teams that participated!
-
-If there's a challenge, solution, setup, etc missing from this repo that you're interested in then hit us up on our [IRC](https://rpis.ec/irc)!
-
-Special thanks to everyone who contributed their time or a challenge!
-
-Patrick Biernat, Nick Burnett, Maxfield Chen, Branden Clark, Jack Dates, Gwen Diebold, Kareem El-Faramawi, Josh Ferrell, Daniel Fitzgerald, Jassiem Ifill, Andrew Marumoto, Wyler McAninch-Ruenzi, Austin Ralls, Galen Schretlen, Aaron Sedlacek, Max Shavrick, Avi Weinstock
+Hack The Vote was a 48 hour Jeopardy style computer security Capture The Flag (CTF) organized and run by [RPISEC](https://rpis.ec) on November 4th, 2016. Competitors solved challenges from a number of different common categories, including: cryptography, binary exploitation, reverse engineering, forensics and web exploitation. 
 
 <p align="center">
-<b>End-game challenge board</b>
 <br>
 <img src="/board.png" alt="Challenge board"/>
 </p>
+
+The CTF was themed in the spirit of the then ongoing 2016 US Presidential Election, serving as a commentary on the ever evolving role of technology, cyber security, and hacking in modern political elections around the globe.
+
+If there are any challenges, solutions, setup scripts (etc...) that are broken (or missing), please feel free to file an issue, or drop by our [IRC](https://rpis.ec/irc).
 
 ##Statistics
 |  |  |
@@ -37,3 +33,11 @@ Patrick Biernat, Nick Burnett, Maxfield Chen, Branden Clark, Jack Dates, Gwen Di
 <br>
 <img src="/solves.png" alt="Solves by challenge"/>
 </p>
+
+# Acknowledgements
+We hope you had fun playing Hack the Vote! We had a great time running the CTF and chatting with the hundreds of individuals who joined us on IRC for the duration of the event. We appreciate all the constructive feedback we've received and were thrilled by the outcome of hosting our first CTF. Thank you to all those who participated.
+
+Special thanks to everyone who contributed their time or challenges to the CTF.
+
+## Organizers
+Patrick Biernat, Nick Burnett, Maxfield Chen, Branden Clark, Jack Dates, Gwen Diebold, Kareem El-Faramawi, Josh Ferrell, Daniel Fitzgerald, Markus Gaasedelen, Jassiem Ifill, Andrew Marumoto, Wyler McAninch-Ruenzi, Austin Ralls, Kibo Schaffer, Galen Schretlen, Aaron Sedlacek, Max Shavrick, Avi Weinstock
