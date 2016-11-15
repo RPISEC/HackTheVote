@@ -1,0 +1,440 @@
+[
+  {
+    "category": "Forensics", 
+    "name": "Electioneering", 
+    "value": 250, 
+    "state": "WA", 
+    "flags": [
+      "flag{4nd_th3_w1nn3r_15...}"
+    ], 
+    "desc": "We confiscated this poster that was being handed out at polling places. It doesn't appear to be supporting a candidate, but we'd like you to take a look just to be sure.\n\n[poster](https://s3.amazonaws.com/hackthevote/poster.d493c28eab4c4273e941326b4b6a73302016c98f1e364f1c030e0d766a865a0c.png)\n"
+  }, 
+  {
+    "category": "Forensics", 
+    "reaction": 5, 
+    "name": "More Suspicious Traffic", 
+    "influence": 3, 
+    "value": 300, 
+    "state": "ID", 
+    "flags": [
+      "FLAG(H4CK7H3PL4N37)", 
+      "flag(h4ck7h3pl4n37)", 
+      "FLAG{H4CK7H3PL4N37}", 
+      "flag{h4ck7h3pl4n37}"
+    ], 
+    "desc": "We think our voting computers might be compromised! The Clinton campaign claims Trump is working with the Russians to rig the election. Our tech got a packet capture right before strange things started happening and isolated these packets. Our IDS didn't flag anything, but take a look and see if you can find any hidden communications channels the Russians could use for command and control (C2). It would make the leaders of the free world look pretty bad if the Russians were the ones picking our president!\n\n[SecureFloridaVotingBoothTraffic](https://s3.amazonaws.com/hackthevote/SecureFloridaVotingBoothTraffic.9c56dd72a07a165680f1bdaccc37136c57f840712ac7db980064c8b386ff06c6.pcapng)\n"
+  }, 
+  {
+    "category": "Forensics", 
+    "reaction": -4, 
+    "name": "Trump likes colors", 
+    "influence": -3, 
+    "value": 250, 
+    "state": "NV", 
+    "flags": [
+      "flag{7h15_w45n7_3v3n_4_ch4ll3n63._54d_.}"
+    ], 
+    "desc": "Somebody leAked TrumP's favorite colors, looks like they used a really esoteric format. Some chiNese hacker named \"DanGer Mouse\" provided us the leak, getting this crucial info could really sway voters at the polls!\n\n[trump_likes_colors.png](https://s3.amazonaws.com/hackthevote/trump_likes_colors.bcddf8152cf2848c058310655c280a7dbb4f22fcc3687f00a26b6e9a57657dc4.png)\n"
+  }, 
+  {
+    "category": "Forensics", 
+    "reaction": -2, 
+    "name": "Warp Speed", 
+    "influence": -1, 
+    "value": 150, 
+    "state": "AZ", 
+    "flags": [
+      "flag{1337_ph0t0_5k1ll5}"
+    ], 
+    "desc": "Our Trump advertising campaign is incredible, it's skyrocketing! It's astronomical! Wait stop!! SLOW DOWN!!!\n\n[warp_speed](https://s3.amazonaws.com/hackthevote/warp_speed.5978d1405660e365872cf72dddc7515603f657f12526bd61e56feacf332cccad.jpg)\n"
+  }, 
+  {
+    "category": "Forensics", 
+    "reaction": -10, 
+    "name": "Hillary's Emails", 
+    "influence": -5, 
+    "value": 500, 
+    "state": "CA", 
+    "flags": [
+      "flag{w1k1L3ak5_g0T_n0tH1ng_0n_m3}"
+    ], 
+    "desc": "We suspect Hillary has been smuggling her emails over the border using some kind of underground passageway. Find out where she's hiding them and what secrets they contain\n\n[hillary](https://s3.amazonaws.com/hackthevote/hillary.aa6ac501182f72c0563965aee62e0e7a09bcce6786321929e71d03d536080859.pcap)\n"
+  }, 
+  {
+    "category": "Forensics", 
+    "name": "Double Agent", 
+    "value": 250, 
+    "state": "WY", 
+    "flags": [
+      "flag{itsallintheligatures}"
+    ], 
+    "desc": "We have a man on the inside of Trump's campaign, but he's too afraid to leak secrets through normal communication methods. He swapped out the normal font on the campaign website for this one, and we suspect his data is inside.\n\n[lexicographic.otf](https://s3.amazonaws.com/hackthevote/lexicographic.646ab52fa361f7d2b3649ccca31a26771ac7f30dad486e1880434210b9d83ae6.otf)\n"
+  }, 
+  {
+    "category": "Forensics", 
+    "reaction": 8, 
+    "name": "Lockpicking", 
+    "influence": 6, 
+    "value": 350, 
+    "state": "OR", 
+    "flags": [
+      "flag{p4dl0ck5_us3_A3S_n0w4d4ys_wh0_kn3w}"
+    ], 
+    "desc": "You've been chosen to rig the ballots in favor of your candidate. You find the box, but it's locked with an indestructible padlock. Your only hope is to pick the lock! You'll need these tools to get the job done. Good luck ;)\n\n[lockpick](https://s3.amazonaws.com/hackthevote/lockpicking.ec95daebcc116c7f27e892d61a1333372e8903a039267e083a857a41deb37070.png)\n\nHint: I found these keys, but they still don't open the padlock :( These lockpicks are starting to seem pretty insignificant.\n"
+  }, 
+  {
+    "category": "Web", 
+    "reaction": 6, 
+    "name": "Voter Registration", 
+    "influence": 3, 
+    "value": 200, 
+    "solvedText": "A record number of Democrats have registered here in Kansas.  This may the first time in 48 years that it swings!", 
+    "state": "KS", 
+    "flags": [
+      "flag{w0w_1_d1dnt_kn0w_th3_1ntern3t_w4s_a_f1le}"
+    ], 
+    "desc": "Trump is up quite a bit in Kansas, but with other historically red states (like Arizona) shifting sides, I think we can take this. Just takes a little voter fraud. Our target is the voter registration site, it looks like it is from the 90s, so it might be super vulnerable. If you can register a bunch of our people, we can bus them out and get them to vote for Clinton.\n\nhttp://kansas.pwn.republican\n"
+  }, 
+  {
+    "category": "Web", 
+    "reaction": 10, 
+    "name": "Politician Hosting", 
+    "headline": "Trump's Servers Hacked! Classified Documents stolen! Polls Suffering!", 
+    "influence": 5, 
+    "value": 500, 
+    "solvedText": "With Trumps secrets leaked as well, the election is now fair game. Both mishandled classified documents, so now the Trump campaign is out of fodder.", 
+    "state": "IL", 
+    "flags": [
+      "flag{Bu7_1_Th0gh7_H77PS_w4s_S3cure}"
+    ], 
+    "desc": "So what if she leaked some emails. I'm sure trump has done things like that. In fact with his recent security briefings, he might have some juicy secrets to misplace. He's been using that hosting and dns service aimed at raising politicians. Knowing how messy his businesses are, he must have something stuffed away on his web server. You probably won't find it unless you gain access to his control panel.\n\nhttps://voteforme.hosting.pwn.republican\n"
+  }, 
+  {
+    "category": "Web", 
+    "reaction": 2, 
+    "name": "Sanders Fan Club", 
+    "influence": 1, 
+    "value": 100, 
+    "state": "IN", 
+    "flags": [
+      "flag{I_am_very_bad_with_computers}"
+    ], 
+    "desc": "Those deplorable Sanders supporters are still fighting. Shut the site down by finding where the idiot stored his credentials.\n\nhttp://sandersfanclub.pwn.democrat\n"
+  }, 
+  {
+    "category": "Web", 
+    "reaction": 10, 
+    "name": "Just in Time", 
+    "influence": 5, 
+    "value": 300, 
+    "state": "KY", 
+    "flags": [
+      "F1:A6:FA:11:C0:DE:CO:11:DE:5L:0C:AL:E5", 
+      "FA:11:C0:DE:CO:11:DE:5L:0C:AL:E5", 
+      "FA11C0DECO11DE5L0CALE5"
+    ], 
+    "desc": "Somebody broke into Kentucky's voter registration system last week but the officials are only saying that they patched it instead of saying who it was. Can you find a new way into their management system and identify the attacker? After registration closes, the site will be taken offline so don't miss your chance.\n\nNote: This challenge uses a slightly nonstandard flag format\n\nhttp://kentucky.pwn.republican\n\nNOTE: Challenge only solveable during the EDT -> EST time change\n"
+  }, 
+  {
+    "category": "Web", 
+    "reaction": 8, 
+    "name": "Trump Watch", 
+    "influence": 4, 
+    "value": 300, 
+    "solvedText": "Thanks to you, we were able to leak their databases and reveal their anonymous to the world.", 
+    "state": "MO", 
+    "flags": [
+      "flag{n0t_s0_r4nd0m_4ft3r_all_m4yb3_php_n33ds_t0_get_w1th_th3_t1mes}"
+    ], 
+    "desc": "I think we have found an alt-right hotspot, in this blog which covers Trumps operations. Our reports show that they have been attacked a few times, and had their databases dropped. They seem to have beefed up security, but the admin still probably has some access to some interesting details. \n\nhttp://watch.pwn.republican\n\nHint 1: Google is good at cracking hashes\nHint 2: /database.sql\n\nNo off the shelf automated tools are nedeed.\n"
+  }, 
+  {
+    "category": "Crypto", 
+    "name": "Vermatrix Supreme", 
+    "value": 100, 
+    "state": "MT", 
+    "flags": [
+      "flag{IV_wh4t_y0u_DiD_Th3r3}"
+    ], 
+    "desc": "Working in IT for a campaign is rough; especially when your candidate uses his password as the IV for your campaign's proprietary encryption scheme, then subsequently forgets it. See if you can get it back for him. The only hard part is, he changes it whenever he feels like it.\n\n`nc vermatrix.pwn.democrat 4201`\n\n[handout](https://s3.amazonaws.com/hackthevote/handout.4838bbdb8619b3a581352c628c6b0b86475b94c9519347a520c90cf1822351ae.py)\n"
+  }, 
+  {
+    "category": "Crypto", 
+    "reaction": 3, 
+    "name": "BabyHands", 
+    "influence": -3, 
+    "value": 300, 
+    "state": "MI", 
+    "flags": [
+      "flag{G3t_1t?_1t_h4s_4_sm4ll_d}"
+    ], 
+    "desc": "We think that Trump's right hand man has been sending out flags from his personal computer, but we need to be sure. See if you can make anything out of the traffic we intercepted.\n\n[intercepted](https://s3.amazonaws.com/hackthevote/intercepted.02dc90d82b414f7de3f0d75aea5c210fbdb3257fc731179e26c211bbb81d2e76.tar.gz)\n"
+  }, 
+  {
+    "category": "Crypto", 
+    "reaction": -8, 
+    "name": "SMTPresident", 
+    "influence": -4, 
+    "value": 400, 
+    "state": "MN", 
+    "flags": [
+      "flag{0b4ma_1s_sT1ll_tH3_Pr3s1D3nT_0f_mY_H34rt}"
+    ], 
+    "desc": "The FBI reopened their investigation of Hillary Clinton after they recovered some interesting files from her personal email server.\n\n[emails](https://s3.amazonaws.com/hackthevote/emails.7447eb2595600258fc12333bfe89e2e1a4e4c75ec5d85246aa5a3e22c2be0d9a.tar.gz)\n[pubkeys](https://s3.amazonaws.com/hackthevote/pubkeys.57e8119c230ea2b76ae5af9ff6681ad090cbd5473965df5935d07cd25a8d55aa.tar.gz)\n[flag](https://s3.amazonaws.com/hackthevote/flag.76ce6f536a36e4b8a79d00736bc6f4f381e38b0a05148b7b041e47abd0fc0777.ctxt)\n"
+  }, 
+  {
+    "category": "Crypto", 
+    "reaction": 6, 
+    "name": "The Best RSA", 
+    "influence": 3, 
+    "value": 250, 
+    "state": "IA", 
+    "flags": [
+      "flag{s4ved_by_CH1N4_0nc3_aga1n}"
+    ], 
+    "desc": "At his last rally, Trump made an interesting statement:\n\n> I know RSA, I have the best RSA\n> The more bits I have, the more secure my cyber, and my modulus is YUUUUUUUUUUUUUGE\n\nWe don't believe his cyber is as secure as he says it is. See if you can break it for us\n\n[best_rsa](https://s3.amazonaws.com/hackthevote/best_rsa.878a518bf7012add6d071f3b52562e8b102e72a0cc815aee7cb007cdc03c7714.txt)\n"
+  }, 
+  {
+    "category": "Crypto", 
+    "name": "TOPKEK", 
+    "value": 50, 
+    "state": "ND", 
+    "flags": [
+      "flag{T0o0o0o0o0P______1m_h4V1nG_FuN_r1gHt_n0W_4R3_y0u_h4v1ng_fun______K3K!!!}"
+    ], 
+    "desc": "A CNN reporter had only one question that she couldn't get off her mind\n\n> Do we even know, who is this 4 CHAN???\n\nSo she set out to find who this 400lb hacker is. During her investigation, she came across this cryptic message on some politically incorrect forum online, can you figure out what it means?\n\n[kek](https://s3.amazonaws.com/hackthevote/kek.43319559636b94db1c945834340b65d68f90b6ecbb70925f7b24f6efc5c2524e.txt)\n"
+  }, 
+  {
+    "category": "Crypto", 
+    "reaction": -4, 
+    "name": "Boxes of Ballots", 
+    "influence": -2, 
+    "value": 200, 
+    "state": "WI", 
+    "flags": [
+      "flag{Source_iz_4_noobs}"
+    ], 
+    "desc": "Privjet Komrade!\n\nWhile doing observing of Amerikanski's voting infrascture we find interesting box. We send operative to investigate. He return with partial input like showing below. He say box very buggy but return encrypted data sometimes. Figure out what box is do; maybe we finding embarass material to include in next week bitcoin auction, yes?\n\n`ebug\": true, \"data\": \"BBBBBBBBBBBBBBBB\", \"op\": \"enc\"}`\n\n`nc boxesofballots.pwn.republican 9001`\n"
+  }, 
+  {
+    "category": "Crypto", 
+    "reaction": 2, 
+    "name": "Trump Trump", 
+    "influence": 1, 
+    "value": 100, 
+    "state": "SD", 
+    "flags": [
+      "flag{y0u_c4n'T_duMp_TrUmP}"
+    ], 
+    "desc": "With Trump about to be in office, autographed photos of him are selling like wildfire. The only problem is: Trump makes it a point to never sign a photo of himself. If you could get a signed picture, you could stand to make DOZENS of dollars.\n\n`nc trumptrump.pwn.republican 3609`\n\n[trump](https://s3.amazonaws.com/hackthevote/trump.04a0d9783458ec220e8ba41f4fb3d0e039750b3d79945a5e941f1bfb55cf68fc.jpg)\n[trumpkey](https://s3.amazonaws.com/hackthevote/trumpkey.40d05be69f643e65ca35d8d6db10afcdaedc938c8aac6821d3cc559655ee6828)\n\nNote: The server accepts decimal numbers and your line delimiter must be '\\r\\n'.\n"
+  }, 
+  {
+    "category": "Exploitation", 
+    "reaction": -8, 
+    "name": "I Am Hilldog", 
+    "influence": -4, 
+    "value": 400, 
+    "state": "GA", 
+    "flags": [
+      "flag{did_y0u_find_d3m_f0rg0tt3n_d0gm4i75_t0_pwn_th3_d3vi0u5_hi77d0g}"
+    ], 
+    "desc": "You've just managed to get access to Hilldog's personal email client, which also acts as storage when she can actually remember something. Can you send the hilldog back to the pound?\n\n[i_am_hilldog](https://s3.amazonaws.com/hackthevote/i_am_hilldog.759e37d6ab163054864cec7c610d3bb80c9116ba8664a170ac20e0f067018805)\n"
+  }, 
+  {
+    "category": "Exploitation", 
+    "reaction": 10, 
+    "name": "IRS", 
+    "influence": 1, 
+    "value": 100, 
+    "state": "PA", 
+    "flags": [
+      "flag{c4n_1_g3t_a_r3fund}"
+    ], 
+    "desc": "Good day fellow Americans. In the interest of making filing your tax returns as easy and painless as possible, we've created this nifty lil' program to better serve you! Simply enter your name and file away! And don't you worry, everyone's file is password protected ;)\n\n`nc irs.pwn.republican 4127`\n\n[irs](https://s3.amazonaws.com/hackthevote/irs.fdcb32492e18be0af53449cee097327b58e542f640df440dfa5097fa567bd094)\n"
+  }, 
+  {
+    "category": "Exploitation", 
+    "name": "Primaries", 
+    "value": 150, 
+    "state": "VA", 
+    "flags": [
+      "flag{st0p_4sk1ng_f0r_br3ak5_4nd_g3t_4_j0b}"
+    ], 
+    "desc": "The first stage of any election are the primaries. Unfortunately, only entertainment figures registered for the ballot! See if you can get in and get some real candidates on there. Having a TV personality as President would be a disaster.\n\n`nc primaries.pwn.republican 1901`\n\n[primaries](https://s3.amazonaws.com/hackthevote/primaries.06d9d120544db7192228e58a1b67cba140e8cfc0422f6e525bbef7a466dfae8f)\n"
+  }, 
+  {
+    "category": "Exploitation", 
+    "reaction": -5, 
+    "name": "FOX Voting Simulator", 
+    "influence": -3, 
+    "value": 300, 
+    "solvedText": "Great, thanks to your help, Mr Trump is smashing all the new polls, and gaining momentum. And everyone said he couldn't do it!", 
+    "state": "WV", 
+    "flags": [
+      "flag{R3sr1ct_y0ur_s3lf_T0_s0uRce_0nly_4nD_y0u_w1ll_l3ak_a_l0t}"
+    ], 
+    "desc": "In primaries, it is important to get the most attention. With 12 candidates all sharing the stage, it can be hard to pull in voters. Luckily Mr Trump doesn't have much problem with that, but we have a strategy to secure the vote for good. We have found voters respond very well to name recognition, and which ever candidate is polling the highest. We see a snowball effect if we can tip a few online polls his way, then it will be easier for him to take the real ones, and then eventually the nomination.\n\nWe were able to dump some of the source code from FOX's new online poll service. We couldn't get everything, but I'm sure that is no problem for you.\n\n`nc fox.pwn.republican 9000`\n\n[foxSim](https://s3.amazonaws.com/hackthevote/foxSim.7d62303c1c88beb1c9b59e49422d4eadce93e3daa42b7c6fb50248103ae69a2f.zip)\n\n"
+  }, 
+  {
+    "category": "Exploitation", 
+    "reaction": -10, 
+    "name": "/dev/vote", 
+    "headline": "Reports of glitched voting machines... However Trump surges in the polls", 
+    "prereq": "Old Tech", 
+    "influence": -5, 
+    "state": "TN", 
+    "value": 500, 
+    "solvedText": "We have taken our election back! The globalists won't bother us under the guidance of Donald Trump! Celebrate with some DNA Force(tm) for just #134.95 http://store.infowars.com/DNA-Force_p_1368.html", 
+    "unlock": "Old Tech", 
+    "flags": [
+      "flag{y4_r1gh7_l1k3_A_r4c3_c0nd1tion_could_h4ppen_1n_th3_real_k3rnel...}"
+    ], 
+    "desc": "Nice job infowarrior, you are a true patriot. We are almost there. Now that we have access to the shadow government's admin server, we can extend to the real rigged voting machines and unrig them. Make sure to take some DNA Force(TM) to enhance your mitochondrial functions while you dig though the deep internals of these voting machines.\n\nOur investigative team was able to find that the voting machines are open, and we can log into them. But I don't think that is enough. We need to root them to make sure they can't rig them again before the 8th.\n\nLog into the vm system with `ssh vm@dev.vote.pwn.democrat` and credentials `vm:h4ckthevm`.\n<teampass key=\"04460359707883037ba53d6fd358f9bccfbb65cfe6e0aef0bbc56e655228\">\n\nThe credentials for the actual VM are `user:user`\n"
+  }, 
+  {
+    "category": "Exploitation", 
+    "reaction": -5, 
+    "name": "OracleVote", 
+    "influence": -3, 
+    "value": 500, 
+    "state": "FL", 
+    "flags": [
+      "flag{At_4b0ut_100_d3gr33s_C3ls1us_th3_m3m0ry_ch1ps_st4rt_g3n3r4t1ng_f4ults--(Appel_and_Govindavajhala,_2003)}"
+    ], 
+    "desc": "There are some smart-card based voting machines that are advertising the fact that their backend servers are experiencing occasional errors. These servers are located in Florida, making a shell on them quite valuable to our organization (Hactivists for Trump).\n\n`nc oraclevote.pwn.democrat 31337`\n\n[oracleVote](https://s3.amazonaws.com/hackthevote/oracleVote.e08e6f7002a576bf789101ccf6649b80c66e903d8d74c21fea2e97b87abb1488.zip)\n[procdump](https://s3.amazonaws.com/hackthevote/procdump.a3f8f90302916ad3c7472ff7883860f72bef98d4daf544232c032e8aababda57.zip)\n"
+  }, 
+  {
+    "category": "Exploitation", 
+    "reaction": -2, 
+    "name": "Ballot Return", 
+    "influence": -2, 
+    "value": 200, 
+    "state": "MS", 
+    "flags": [
+      "flag{but_pyth0n_n3v3r_f4il5}"
+    ], 
+    "desc": "We heard that many district county were of switch to electronic voting system. Though Trump is not worry about lose, we are of worry for him. Putin is miss their horseback riding, and as President visits will be of more frequent.\n\nWe have a team that can get you registered to vote. \nSend our team the password below for further instruction.\n\n`nc ballotregister.pwn.democrat 22096`\n<teampass key=\"9b72982d6b9bda33cc9366cd4d4ebe359ecd779232cf58aecb9aec2f363b\">\n\n[ballot_return](https://s3.amazonaws.com/hackthevote/ballot_return.af2119eff9f740d23f18a7a4ca24d7dfd6e84ae754294ba50930dbf512017422.py)\n\nHint: Congress had limits added to prevent voters from using too much voting resources.\n"
+  }, 
+  {
+    "category": "Exploitation", 
+    "reaction": -8, 
+    "name": "ctrscript", 
+    "influence": -4, 
+    "value": 500, 
+    "state": "AL", 
+    "flags": [
+      "flag{m4yb3_w3_can_c0rr3ct_the_Rec0rd_and_pr3tend_th1s_l4nguag3_n3ver_3xi5ted..}"
+    ], 
+    "desc": "Correct The Record has created a new web browser which they are using to rig the election. To keep control of it, they are making it SaaS. They plan to force all the major browsers to use it, so that they can stifle free speech and cause Trump to lose the election. Hack into their server and put a stop to their evil plans.\n\n`nc ctr.pwn.democrat 9000`\n\n[ctrscript](https://s3.amazonaws.com/hackthevote/ctrscript.2cdade6061725e2aaf13354f2fce22e5ae2461d608f6a1b64ada87879cfc101d.ctrscript)\n"
+  }, 
+  {
+    "category": "Exploitation", 
+    "reaction": 8, 
+    "name": "Tetrump Ultimate", 
+    "influence": 5, 
+    "value": 500, 
+    "state": "SC", 
+    "flags": [
+      "flag{O-sp1n5_ov3r_0-d4ys}"
+    ], 
+    "desc": "Tetrump Ultimate just got released and everyone is playing it. Trump's campaign manager is a particularly avid player who sometimes watches replays at work. We need access to his computer. See if you can hack the game and get us in.\n\n`nc tetrumpultimate.pwn.republican 9400`\n\n[TetrumpUltimateReplayViewer](https://s3.amazonaws.com/hackthevote/TetrumpUltimateReplayViewer.181c64dce52dbcc61296f2fa3e0ce6dab37da7e98d4b9eeea3ef5ec33f78c76a)\n"
+  }, 
+  {
+    "category": "Exploitation", 
+    "reaction": -6, 
+    "name": "Old Tech", 
+    "headline": "New Challenge /dev/vote released", 
+    "prereq": "Frontdoor", 
+    "influence": -3, 
+    "state": "NC", 
+    "value": 300, 
+    "solvedText": "Alexapure(tm) on sale now for $177 http://store.infowars.com/Alexapure-Pro-Water-Filtration-System_p_1713.html", 
+    "unlock": "Frontdoor", 
+    "flags": [
+      "flag{I0T_15_lik3_th3_90s_ag41n_bu7_wh0_us3s_m1p5?}"
+    ], 
+    "desc": "Alex Jones back again! You are a true patriot fighting for our general, Donald Trump. Now that we have gotten a foothold, it is time to put these globalists in their place. See that guy in the video? He is clearly rigging the election as we speak! What ever that website he has got there. That must be a weakspot, knowing how those liberals mishandle their tech, JUST like Crooked Hillary Clinton and her email servers. Did I mention how they got hacked? The globalist media keeps trying to hid that fact, but we know it will sink her in the end.\n\nAnyway, what was I saying? Oh ya. You got to hack that webserver. Keep scouting with that IP camera, something must come up. They all suck at operation security, how else could Assange keep hacking them? Good luck, and don't forget to stay hydrated with your very own Alexapure Pro Water Filtration System (TM) to block out all the fluoride that is controlling your mind.\n\nhttp://oldtech.pwn.democrat:8080\n\n(Note, there is no brute forcing required. Doing so will get your IP banned...)\n"
+  }, 
+  {
+    "category": "Reversing", 
+    "reaction": 4, 
+    "name": "The Wall", 
+    "influence": 2, 
+    "value": 200, 
+    "state": "TX", 
+    "flags": [
+      "flag{pl34s3_d0N7_v4c_b4N_M3_n0tch!}"
+    ], 
+    "desc": "The Trump campaign is running a trial of The Wall plan. They want to prove that no illegal immigrants could get past it. If that goes as planned, us here at the DNC will have a hard time swinging some votes in the southern boarder states. We need you to hack system and get past the wall. I heard they have put extra protections into place, but we think you can still do it. If you do get into America, there should be a flag somewhere in the midwest that you can have. You will be US \"citizen\" after all.\n\nServer: mine.pwn.republican port 30000\n\n[minetest](https://s3.amazonaws.com/hackthevote/minetest.71faba51ce131fbfb5b58924ad6073a37d8ca60d32d4ad77197f064f8bef0a16.zip)\n\nIf you get \"Invalid Version\" errors, just try to connect again (make sure to use the same password)\n"
+  }, 
+  {
+    "category": "Reversing", 
+    "name": "Consul", 
+    "value": 100, 
+    "state": "AR", 
+    "flags": [
+      "flag{write_in_bernie!}"
+    ], 
+    "desc": "Bernie Sanders 2018\n\n[consul](https://s3.amazonaws.com/hackthevote/consul.dcdcdac48cdb5ca5bc1ec29ddc53fb554d814d12094ba0e82f84e0abef065711)\n"
+  }, 
+  {
+    "category": "Reversing", 
+    "reaction": -2, 
+    "name": "Frontdoor", 
+    "headline": "New Challenge Old Tech released!", 
+    "influence": -2, 
+    "value": 200, 
+    "solvedText": "Brain Force(tm) now just 29.95 http://store.infowars.com/Brain-Force_p_1611.html", 
+    "state": "CO", 
+    "flags": [
+      "flag{B4CK_D0OR_A1L_7h3_107!4_R3AL!}"
+    ], 
+    "desc": "Alex Jones here. We all know Crooked Clinton has rigged the election. The establishment is afraid of Trump! But Trump has heard our call, he knows the history of fraud, he knows how they tried to steal the primaries from him,and how they did steal it from Bernie Sanders, unfortunately. So now he needs your help fellow patriot. Help us unrig these establishment owned voting machines, one polling station at a time!\n\nNow we have got some of the best people together, and have found that they are using a camera that clearly wasn't made in the US of A. Clearly the Dems have already rigged this station. See if you can't find a way in though that immigrant camera. I'm sure you can't fail with the help of some official INFOWARS branded BRAIN FORCE(tm) now available for only 22.46 (limited time only.)\n\nhttp://surveillance.pwn.democrat/\n\n[frontdoor](https://s3.amazonaws.com/hackthevote/frontdoor.049abadfccc0d3cff290a85416902f83e91157f00439400abb35f59648ce9793)\n\n"
+  }, 
+  {
+    "category": "Reversing", 
+    "reaction": -6, 
+    "name": "Slowdown", 
+    "influence": -3, 
+    "value": 300, 
+    "state": "OK", 
+    "flags": [
+      "flag{pl3nty_0f_pr!mes_t0_g0_@round}"
+    ], 
+    "desc": "Just saw this on CTFNN, looks like the DNC hired some top notch consulants to fix their cyber problems.\n\n> CTF News Network: So, how can you be sure these servers are secure this time around?\n> Consultant:  It took a /long time/ to generate the keys that let you log into them. \n> CTF News Network: Wow, thats great. When will they be ready?\n> Consultant: Everything's live already! I did all the work in the past few days! \n> CTF News Network: A true national cyber hero! We'll have more on this story at 13:37.\n\nThats as sketch as it gets. Our inside man managed to exfil an ip address of one of the servers, a pubkey, and the libcrypto that was on the box. I bet there's some good stuff on it.\n\n`ssh slowdown@slowdown.pwn.democrat`\n\n[id_rsa](https://s3.amazonaws.com/hackthevote/id_rsa.8f413ca1bdcd5bbfc3455195ddddaaf5efbbf66261a3dd440b5702636674e2bb.pub)\n[libcrypto](https://s3.amazonaws.com/hackthevote/libcrypto.so.1.0.0.12e54c010aef4ee5464b25863e68f4c9e6f47c0adecfd11a96c0aae3f9c68626)\n"
+  }, 
+  {
+    "category": "Reversing", 
+    "name": "Machines (of The State)", 
+    "value": 250, 
+    "state": "UT", 
+    "flags": [
+      "flag{4nd_h15_N4m3_W4s_R1cH4rds}"
+    ], 
+    "desc": "So we found this fancy new electronic CyberVoteLock (tm) on some voting machines. Lockpicks won't cut it for this one.\nI got some poor EE student to extract the schematic, but I didn't take ecse4770. You're good with computers. Can you take a look?\n\n`nc machines.pwn.republican 9000`\n\n[machines_of_the_state](https://s3.amazonaws.com/hackthevote/machines_of_the_state.057399f8a2f1497357c9c585f1649296940a4cca721cc13370f5c29a34d834f6.tar.gz)\n\nEDIT: \n\tInput to the server should be in the form of a zero-padded hex-encoded byte string: to send the sequence [1] [3] [3] [7], send the server 01030307. \n    The keypad is attached where indicated in the schematic and behaves like a typical 4x4 keypad attached to a 74xx922.\n"
+  }, 
+  {
+    "category": "Reversing", 
+    "reaction": 10, 
+    "name": "Trumpervisor", 
+    "influence": 5, 
+    "value": 400, 
+    "state": "NM", 
+    "flags": [
+      "flag{HyP3rv1s04z_aRe_T3h_fuTuR3}"
+    ], 
+    "desc": "We found a flash drive on the floor today. The flash drive had this binary on it and a text file that said 'Make Virtualization Great Again!' Naturally, we need someone to look into this. These files are way too suspicious to overlook, especially this close to the election. Can you tell us what this binary is doing?\n\n`nc trumpervisor.pwn.republican 9000`\n\n[Trumpervisor](https://s3.amazonaws.com/hackthevote/Trumpervisor.bf38753e7bfc93d1bbf9aee6aa6dbdcd39d2ccd31f1547253a75209419f0828a.sys)\n\nEDIT: The bytes at 0x140002240 should be d6ff72e7cbbd3dae9ebd3dae9ebd3dae9ebd3dae9ebd3dae9ebd3dae9ebd3dfd (hex decoded of course)\n"
+  }, 
+  {
+    "category": "Reversing", 
+    "reaction": 6, 
+    "name": "APTeaser", 
+    "influence": 3, 
+    "value": 300, 
+    "state": "LA", 
+    "flags": [
+      "flag{1_n33d_my_t00Lb4r5}"
+    ], 
+    "desc": "The Trump campain is suddenly able to predict our every move. We believe that they hired either Russia or one of those 400 lb hackers to compromise our staff systems.\n\nFind out what information they stole and how!\n(No, it's not one of /those/ pcap challenges)\n\n[apteaser](https://s3.amazonaws.com/hackthevote/apteaser.ed7297bf3faecccdc642c661607d41e804c7e819b2366d2939fb17df88ae4d4f.pcapng)\n"
+  }
+]
