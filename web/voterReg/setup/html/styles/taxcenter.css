@@ -1,0 +1,139 @@
+﻿.center
+{
+  clear:both;
+  text-align: center;
+  
+}
+fieldset.main
+{
+  float: left;
+  clear: left;
+  margin: 0 0 0 1em;
+  padding: 0;
+  border: none;
+  width: 100%;
+}
+fieldset.inner
+{
+  float: left;
+  clear: left;
+  margin: 0 0 1.5em 2em;
+  padding: 0;
+  border: none;
+  width: 100%;
+}
+
+legend.inner
+{
+  margin: 0 0 1em 1em;
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+legend.main
+{
+  
+  margin: 0 0 2em 1em;
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+div.layout
+{
+        margin: 0 0 .5em 0;
+    clear:both;
+}
+div.center
+{
+  padding: 0 0 .5em 0;
+  text-align: center;
+  width:800px;
+}
+label.default
+{
+  font-weight: bold;
+  display: block;
+  float: left;
+  margin-right: 1em;
+  text-align: right;
+  width: 25em;
+}
+.clear
+{
+  clear: both;
+}
+.ErrorList
+{
+  text-align: center;
+  color: Red;
+  font-weight: bold;
+  border: none;
+}
+/*Remove Borders from Images */
+img
+{
+  border: none;
+}
+/* This is for text below the entry box */
+.info
+{
+  color: #666666;
+  display: block;
+  font-size: 1em;
+  font-weight: normal;
+  margin: 0 0 0 26em;
+}
+/* This is for text boxes below the label */
+label.top
+{
+  font-weight: bold;
+  display: block;
+  float: left;
+  margin-right: 1em;
+  text-align: left;
+  width: 100%;
+}
+/* This is for the Tooltip popups */
+a.popup
+{
+  position: relative;
+  z-index: 24;
+  background-color: #ccc;
+  color: #000;
+  text-decoration: none;
+}
+
+a.popup:hover
+{
+  z-index: 25;
+  background-color: #ff0;
+}
+
+a.popup span.popup
+{
+display: none;
+}
+
+a.popup:hover span.popup
+{
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: -25%;
+  width: 250px;
+  border: 1px solid #000; padding: 5px;
+  background-color: #720E0E;
+  color: #fff;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight:normal;
+  font-size: 1em;
+}
+/* This is the end of the Tooltip popup code */
+
+/*This is for fields that might wrap to keep them aligned */
+.wrap {
+display: block;
+float: left;
+width: 400px;
+}

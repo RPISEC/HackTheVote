@@ -1,0 +1,8 @@
+create database voteforme;
+use voteforme;
+create table users(id int NOT NULL AUTO_INCREMENT key,username varchar(256) NOT NULL, password varchar(64) NOT NULL, errorid int default 0, erroraccepted int default 0, npc int default 0);
+create table dns(id int NOT NULL AUTO_INCREMENT key,userid int NOT NULL, name varchar(256) NOT NULL, ip varchar(32), subject varchar(256) default "",locked int default 0);
+create table npc(id int NOT NULL AUTO_INCREMENT key,ip varchar(32) not null, token varchar(256) not null, errorid int default 0, erroraccepted int default 0, cooldown int default 0);
+
+insert into users (username, password, npc) values ("admin","",1);
+insert into dns (userid, name, ip, subject, locked) values ((select id from users where npc=1 LIMIT 1), "voteforme.DOMAIN", "LOC_IP", '{"C": "US", "ST": "New York", "CN": "voteforme.DOMAIN", "O": "Totally Not Sketchy Super PAC LLC", "subject": "","emailAddress":"Sup3r_P4k_d0L13rs@polihost.DOMAIN"}', 1);

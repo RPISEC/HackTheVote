@@ -1,0 +1,2 @@
+The server only accepts and signs decimal numbers, and the goal of the challenge is to get the signature of trump.jpg. This can be done a couple of different ways. First, you can use a blinding attack (which this script does) to get the signature of ((2\*\*e)%n)\*picture, then divide that by 2 to ge the signature of the original picture.
+However, you could also notice that the numeric represenation of the picture is divisible by 5, get the signature of the picture divided by 5, get the signature of 5, then multiply the two mod n to ge the signature of the picture.

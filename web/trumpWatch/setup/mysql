@@ -1,0 +1,3 @@
+SET @@global.sql_mode= '';
+use trump;
+INSERT INTO users (name,oldPass,image) VALUES ("admin", "6fc0836f3abd83609f3cc40bd7562e0089dfcd9318ee1e9dd48600627985","https://i.imgur.com/YcpF0lf.jpg")

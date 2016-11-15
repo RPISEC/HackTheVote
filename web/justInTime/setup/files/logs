@@ -1,0 +1,6 @@
+voterreg sshd[332]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=129.21.1.40  user=mysql
+voterreg sshd[332]: Failed password for mysql from 129.21.1.40 port 36885 ssh2
+voterreg sshd[332]: Received disconnect from 129.21.1.40: 11:  [preauth]
+voterreg sshd[332]: PAM 1000 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=129.21.1.40  user=mysql
+voterreg sshd[338]: Accepted publickey for mysql from 129.21.1.40 port 33740 ssh2: RSA F1:A6:FA:11:C0:DE:CO:11:DE:5L:0C:AL:E5
+voterreg sshd[338]: pam_unix(sshd:session): session opened for user mysql by (uid=0)

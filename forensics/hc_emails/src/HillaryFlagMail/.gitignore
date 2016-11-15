@@ -1,0 +1,5 @@
+*.pst
+bin/
+obj/
+.vs/
+

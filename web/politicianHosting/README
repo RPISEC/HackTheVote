@@ -1,0 +1,6 @@
+This will be a tricky one to set up.
+It requires two servers, so there are two set up folders.
+Run setup1 on the first server.
+Then edit setup2 and add the ip of server 1. Then run setup2.
+
+Also the domain *.hosting.pwn.republican needs to be set to the second server

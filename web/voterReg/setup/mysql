@@ -1,0 +1,16 @@
+CREATE DATABASE IF NOT EXISTS votereg;
+use votereg;
+CREATE TABLE IF NOT EXISTS users (
+    id int NOT NULL AUTO_INCREMENT key,
+    firstName varchar(255) NOT NULL,
+    middleName varchar(255) NOT NULL,
+    lastName varchar(255) NOT NULL,
+    suffix varchar(255) NOT NULL,
+    dob varchar(255) NOT NULL,
+    licenceNumber varchar(255) NOT NULL UNIQUE
+);
+CREATE TABLE IF NOT EXISTS secrets (
+    secretName varchar(255) NOT NULL,
+    value varchar(255) NOT NULL
+);
+INSERT INTO secrets (secretName, value) VALUES ('flag','flag{w0w_1_d1dnt_kn0w_th3_1ntern3t_w4s_a_f1le}');
