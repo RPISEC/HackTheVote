@@ -40,4 +40,4 @@ We hope you had fun playing Hack the Vote! We had a great time running the CTF a
 Special thanks to everyone who contributed their time or challenges to the CTF.
 
 ## Organizers
-Patrick Biernat, Nick Burnett, Maxfield Chen, Branden Clark, Jack Dates, Gwen Diebold, Kareem El-Faramawi, Josh Ferrell, Daniel Fitzgerald, Markus Gaasedelen, Jassiem Ifill, Andrew Marumoto, Wyler McAninch-Ruenzi, Austin Ralls, Kibo Schaffer, Galen Schretlen, Aaron Sedlacek, Max Shavrick, Avi Weinstock
+Patrick Biernat, Nick Burnett, Maxfield Chen, Branden Clark, Jack Dates, Gwen Diebold, Kareem El-Faramawi, Andrew Fasano, Josh Ferrell, Daniel Fitzgerald, Markus Gaasedelen, Jassiem Ifill, Andrew Marumoto, Wyler McAninch-Ruenzi, Austin Ralls, Kibo Schaffer, Galen Schretlen, Aaron Sedlacek, Max Shavrick, Avi Weinstock
