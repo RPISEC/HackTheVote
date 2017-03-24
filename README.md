@@ -13,7 +13,7 @@ The CTF was themed in the spirit of the then ongoing 2016 US Presidential Electi
 
 If there are any challenges, solutions, setup scripts (etc...) that are broken (or missing), please feel free to file an issue, or drop by our [IRC](https://rpis.ec/irc).
 
-##Statistics
+## Statistics
 |  |  |
 | --- | --- |
 | Teams registered | 1928 |
