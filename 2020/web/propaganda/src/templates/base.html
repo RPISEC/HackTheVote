@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>{% block title %}PropBot 2000{% endblock %}</title>
+        <style>
+            body {
+                background-image: url("data:image/jpg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCADIAMgDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAIBAwb/xAAkEAEBAAICAgMAAgMBAAAAAAAAAQIRITESQSJRYQNxEzJCkf/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/EABkRAQEBAQEBAAAAAAAAAAAAAAABESESQf/aAAwDAQACEQMRAD8A9vd5/kLJjNTtmWfPjiqaxm72o5+FvOScsrbqOmWXkzHFUpjFgMgAAAAAAAAAAACMsr6Wm8f0sHLq35eiW8d3hd5l75ZljzeLdT7aGTPrmThvlOO7wiyz6nDf4/vL10DthhMZvLsTMrnl+QYrXIyWYTftM3ld1nOWX464zQbhIoBkAAAAAAAAAAAAAAZZtoDllLj92fR5S4267/XVExwxyuVjWh/j8+bNRGc51i6zK59TUbdYz9Z1rMcbfGagrws3lQG446WAyAAAAAAAAAAAy3QNE+W2yg0AAABlm2gM8rNY4xUkxm8u2dXcRfK3kalb/JfLgJAPVUAMgAAAAAAAAMt1ALUzC5Xd6MPllv0u3d1BqTEXLXxxhq4zdXZMZ+o8bld5dAqVqLZv4qlEaAIAAAAAAAAAAAAAAAnLORRtrNXJOMuV3eIvyk4x7RqROV8fjj2qWYY/p46m72mfLLd6gq8Z/wBZMu8+J0b8rqdKt1NRBzusP7Zjb3V3GSbqOcrx0qV0gmXV0oZAAAAAAAAAAAAAZldTkGZXSLjdXc5NzLnbb74991qcGW5T427n2uXHCfdTb3z/AOM6u9WyfZYsrpN583iMz+sU+Vy/16VuYT9ZaZL4Y/q8eJ5Vzk3fLJsvllr0C9efN6RndcYryy1NREmxLWY487roQGQAAAAAAAAAAAE5Zajnd2y3WlWa3ub2cb9NQRvW+ZOeoqXv++6a4k33fpNnfFvPtRds559+m44eWVu7pym7denW56kxxS3FnV2ycYxP+OTnJvlMJ+kly5y6YaTZcuJ0y/Cana8spOIjW7tUMZb2uQkaMgAAAAAAAAAAAAAMs2iy478fboLo5zLf3xDx85qbbcJcu9favKY/HFdWTXPLHwn6yfHmu3j7yc8sbllx0yuMx+V3em3O5cTpOV9ReOOg0mP2vQDIAAAAAAAAAAAAAAAAAAyWYTprLBY2S5c3iGV1NRmWVvDNfYupxx9rhI0ZAAAAAAAAAAAAE5ZSFpP45OchqQ3dbvTZU25ZcY8Qvx1yFixkrRkAAAAAAAAAAAAAAAAAAABP8c7yqv8Ae/iMrcsvGdKuUxnjO0bbldcYp8Nc5KkmM3e2eNz5vQI8t3cnC5UZZa4xbNzW1ZqwgIAAAAAAAAAAAAAAAm0DLLQTDd3Qa5G5SYz9ThNXyyVjPeScvndTpFVj87v023yuoi5eM8ce1zWGP6CcpMJ+okuV3eI6yf8AWTnnbldTpRWN/VIxx0sYAAAAAAAAAAAAC3Q55Xyuooy57usVYyY85VFm/Gb1/RN2/O8fa2LK6zK58ToT56+OMGG2ayyu7xG5ZycY9gqMk8fll23C+WW70Ajcst9EgESqAEAAAAAAAAAAAAR/JdThkn5ega+BzNeuPRreuLQBmNyw51uUAxX/2Q==");
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/playground?payload=:D">Playground</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/challenge?payload=D:">Challenge</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </body>
+</html>

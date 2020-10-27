@@ -1,0 +1,15 @@
+name = "leakguard v2"
+tags = ["pwn"]
+difficulty = "hard"
+author = "pernicious"
+state = "ID"
+description = """
+Your previous intrusion (nice job by the way, one especially
+olfactorily-sensitive customer even called in a hazmat team,
+and has since started vomiting uncontrollably on seeing the candidate's face)
+did not go unnoticed (sloppy... very sloppy).
+
+The candle shop has tweaked their systems, but only ever so slightly,
+shouldn't be a problem for you to get back in...
+"""
+flag = "flag{l3akgu4rd_vs_gl1bc_tc4ch3_ch3cks...i_gu3ss_1n_th3_3nd_n0body_w1ns}"

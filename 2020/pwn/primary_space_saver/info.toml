@@ -1,0 +1,9 @@
+name = "primary_space_saver"
+tags = ["pwn"]
+difficulty = "medium"
+author = "fzzyhd"
+state = "WY"
+description = """
+Thank you for coming.  The electoral college is dealing with a lot of candidates this year, and will do anything to save a few bytes of storage in their logs.  We have reason to believe they've made a mistake somewhere, based on what we know about the implementers.  Your nation will be forever in your debt if you manage to find and exploit their software, and ensure the right candidate wins the election.
+"""
+flag = "flag{xtr0rd1n4ryx0r5}"

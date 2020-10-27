@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+<pre>
+We proud members of the U.S. of A have held the record for the most HOT and FRESH <!--propaganda-->memes since the 14th century!
+Help US<!-- of A--> keep this record by submitting a link to some top-tier <!--propaganda-->memes!
+<!--and remember to Pokemon Go to the polls!-->
+</pre>
+<form id="urlform" class="form" method="post" action="/submit/{{req_id}}">
+    <div class="form-group">
+        <div class="form-group">
+        <label for="hash_input">Give me a string whose sha256 ends in {{ hash_suffix }}</label>
+        <input class="form-control" id="hash_input" value="{{random_val}}">
+        <small class="form-text text-muted">We need to be sure only real h3ckers submit memes</small>
+    </div>
+
+    <div class="form-group">
+        <label for="url_input">URL</label>
+        <input class="form-control" id="url_input">
+    </div>
+    <div class="row">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    </div>
+</form>
+    <div class="row pt-2">
+        <div id="output" class="w-100 p-2 b-1"></div>
+    </div>
+    <script>
+        // This isn't part of the challenge. This is so people won't think the bot is down.
+        function logOutput(msg) {
+            let output = $("#output");
+            output.text(output.text() + msg);
+        };
+
+        $("#urlform").on('submit', function(e){
+            e.preventDefault();
+            $.post("/submit/{{req_id}}",
+                {
+                    hash_input: $('#hash_input').val(),
+                    url: $('#url_input').val()
+                }
+            ).done(function(e){
+                logOutput(e);
+                $("#urlform").remove();
+                var source = new EventSource("/stream?channel={{req_id}}");
+                source.addEventListener('message', function(event) {
+                    var data = JSON.parse(event.data);
+                    logOutput(data['message']);
+                }, false);
+            });
+        });
+    </script>
+{% endblock %}

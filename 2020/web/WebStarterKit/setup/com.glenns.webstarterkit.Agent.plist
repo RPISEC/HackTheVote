@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Label</key>
+        <string>com.glenns.webstarterkit.Agent</string>
+        <key>Program</key>
+        <string>/bin/bash</string>
+        <key>ProgramArguments</key>
+        <array>
+            <string>/bin/bash</string>
+            <string>/Users/webstarterkit/webstarterkit/setup.sh</string>
+        </array>
+        <key>EnvironmentVariables</key>
+        <dict>
+            <key>PATH</key>
+            <string>/bin:/sbin:/usr/bin:/usr/sbin</string>
+        </dict>
+        <key>KeepAlive</key>
+        <true/>
+        <key>ThrottleInterval</key>
+        <integer>2</integer>
+        <key>WorkingDirectory</key>
+        <string>/Users/webstarterkit/webstarterkit</string>
+        <key>RunAtLoad</key>
+        <true/>
+        <key>StandardInPath</key>
+        <string>/Users/webstarterkit/webstarterkit/stdin</string>
+        <key>StandardOutPath</key>
+        <string>/Users/webstarterkit/webstarterkit/stdout</string>
+        <key>StandardErrorPath</key>
+        <string>/Users/webstarterkit/webstarterkit/stderr</string>
+        <key>UserName</key>
+        <string>webstarterkit</string>
+    </dict>
+</plist>

@@ -1,0 +1,9 @@
+name = "Registration Database"
+tags = ["crypto"]
+difficulty = "easy"
+author = "Lense"
+state = "WV"
+description = """
+We've found some voter registration data stored in a database with public access. Unfortunately, they're using AES encryption with secure key generation.
+"""
+flag = "flag{secure crypto isn't always secure}"

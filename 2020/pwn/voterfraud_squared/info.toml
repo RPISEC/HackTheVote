@@ -1,0 +1,10 @@
+name = "VoterFraud^2"
+tags = ["pwn", "reverse"] # Style: Mixed. Mostly reversing but you do need to write an exploit
+category = "reverse"
+difficulty = "hard"
+author = "jsc"
+state = "NM"
+description = """
+Looks like [rival political org] put a rootkit on one of the voting machines in our district. We've closed the booth so that you won't be disturbed while you work on it. We think it contains a key that might open up interesting areas on their network. Can you pwn the rootkit and recover the in-memory flag?
+"""
+flag = "flag{simulacrum_mind_melt}"

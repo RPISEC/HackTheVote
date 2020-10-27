@@ -1,0 +1,19 @@
+name = "fileshare"
+tags = ["pwn", "thinking"]
+difficulty = "hard"
+author = "pernicious"
+state = "NV"
+description = """
+The campaign committees are using a proprietary file sharing service
+to store internal documents, and we've reason to suspect there may be some
+sensitive files among them.
+
+We've purchased a subscription for you to play around with.
+Our expert analysts have started poking around, and have reported
+some odd behavior, but supposedly nothing noteworthy...
+
+Get us those documents, the public must be informed.
+"""
+flag = "flag{pr0udly_0ut5ourc1ng_m3m0ry_c0rrupt1on_t0_r1ng_z3r0_s1nce_2.6.17}"
+first_blood_washington = "Leaked files suggest Lincoln is avid radare2 user, public expresses disappointment"
+first_blood_lincoln = "Leaked files suggest Washington is avid radare2 user, public expresses disappointment"

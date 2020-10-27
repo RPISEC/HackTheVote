@@ -1,0 +1,9 @@
+name = "x96"
+tags = ["reverse"]
+difficulty = "easy"
+author = "glenns"
+state = "FL"
+description = """
+They say that, by trying to appease both sides, the centrists appease neither. Well, we recently found some centrists writing a crackme, cursing about how both sides read the same words but interpret them in different ways...
+"""
+flag = "flag{n3xt_t1m3_w3_jump_t0_r34l_m0d3}"

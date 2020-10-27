@@ -1,0 +1,11 @@
+name = "Dotlocker 1"
+tags = ["web"]
+difficulty = "easy"
+author = "itszn"
+state = "ND"
+description = """
+We have a rogue agent trying to infiltrate our campaign. They have good opsec but we got a tip that they have some secret information uploaded on a hacker file storage site they run. Maybe we can find a way to steal that information from them and prevent more damage to our campaign.
+
+First lets see if we can get some more information about the inner workings of the site. Its not open source but when has that stopped us.
+"""
+flag = "flag{0ff_by_sl4sh_n0w_1_hav3_y0ur_sourc3}"

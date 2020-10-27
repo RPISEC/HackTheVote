@@ -1,0 +1,9 @@
+name = "Holey Cow"
+tags = ["reverse"]
+difficulty = "medium"
+author = "polarbits"
+state = "TN"
+description = """
+Turns out tractors nowadays receive software updates remotely. This along with the fact that missing a day of work can damage a small farm, gives us some not-so-savory ideas... Isn't IoT grand? We've dumped the firmware from a tractor we found and isolated what we think is the part responsible for remote updates. We suspect there's some sort of back door (as there always seems to be with IoT), so hopefully you can figure out what's going on and help us sabotage enough tractors to affect voter turn out.
+"""
+flag = "flag{th4ts_s0m3_n1c3_0bfusc4t10n_y0u_g0t_th3r3}"

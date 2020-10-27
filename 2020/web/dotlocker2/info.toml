@@ -1,0 +1,11 @@
+name = "Dotlocker 2"
+tags = ["web"]
+difficulty = "medium"
+author = "itszn"
+state = "SD"
+description = """
+We have a rogue agent trying to infiltrate our campaign. They have good opsec but we got a tip that they have some secret information uploaded on a hacker file storage site they run. Maybe we can find a way to steal that information from them and prevent more damage to our campaign.
+
+With the new information in hand, lets see if we can craft an exploit to steal that file
+"""
+flag = "flag{JSON_c4n_b3_d4ng3rous_ar0und_n0sq1__m0ngo_pl5}"

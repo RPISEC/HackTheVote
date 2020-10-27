@@ -1,0 +1,13 @@
+name = "Electrostar 1"
+tags = ["pwn"]
+difficulty = "easy"
+author = "itszn"
+state = "WA"
+description = """
+Electrostar(TM) is a new secure modular userspace system which provides security for the upcoming election. We want you to try and find a weakness in the system and slowly work your way in. Our goal is complete compromise!
+
+This challenge is running on Ubuntu 18.04 with the provided libc.
+
+Hint: For the first flag, focus on the `ballot_module.img.sig` and `gui_module.img.sig`
+"""
+flag = "flag{in rwx no one can hear you scream}"

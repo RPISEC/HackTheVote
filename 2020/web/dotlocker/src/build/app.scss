@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+@function tint($color, $percentage) {
+    @return mix(white, $color, $percentage);
+}
+@function shade($color, $percentage) {
+    @return mix(black, $color, $percentage);
+}
+
+$primary: #5F819D;
+
+$black: #1D1F21;
+$black-bis: tint($black, 5%);
+$black-ter: tint($black, 10%);
+
+$grey-dark: #282A2E;
+$grey-darker: shade($grey-dark,10%);
+
+$grey: #373B41;
+$grey-light: tint($grey, 10%);
+$grey-lighter: tint($grey, 20%);
+
+$white: #C5C8C6;
+$white-ter: shade($white, 5%);
+$white-bis: shade($white, 10%);
+
+$red: #CC6666;
+$orange: #DE935F;
+$yellow: #F0C674;
+$green: #5E8D87;
+$cyan: #81A2BE;
+
+$background: $black;
+$body-background-color: $black;
+$body-color: $white;
+
+$text-strong: #fff;
+$title-color: #fff;
+
+$input-background-color: $grey-dark;
+$input-color: $white;
+
+$navbar-dropdown-item-hover-background-color: $white-bis;
+
+@import "./bulma-0.7.5/bulma.sass";
+
+.divide {
+    background-color: $cyan;
+}
+
+#text {
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.comment {
+    color: $red;
+}
+
+.var {
+    color: $cyan;
+}
+
+.con {
+    color: $green;
+}
+
+::-webkit-scrollbar {
+    height: 6px;
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: $grey-darker; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: $grey-light; 
+    cursor: default;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $grey-lighter; 
+}

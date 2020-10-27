@@ -1,0 +1,107 @@
+<div class="jumbotron">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-8">
+            <h1 class="display-3">It works!</h1>
+            <p>This is the default welcome page used to test the correct operation of the Web Starter Kit after installation. If you can read this page, it means that the Web Starter Kit HTTP server installed at this site is working properly. You should replace this file (located at ~/public/index.cs) before continuing to operate your HTTP server. Also be sure to fill in your own flag at main.cs in the Web Starter Kit root directory.</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+         </div>
+         <div class="col-lg-4">
+            <div class="box">
+               <h3>Game Server Status</h3>
+               <ul>
+                  <li>Bind Address: {{server_address}}:{{server_port}}</li>
+                  <li>Uptime: {{sim_time}}</li>
+                  <li>Players Online: {{server_online}} / {{server_total}}</li>
+                  <li>Current Mission: {{current_mission}}</li>
+                  <li>Current Sequence: {{mission_sequence}}</li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="container">
+   <div class="row">
+      <div class="col-lg-4">
+         <h2>21st Century Web</h2>
+         <div>
+            Your web site is using only the latest in modern web technology, running on our premier Torque Game Engine 1.2 HTTP server!
+         </div>
+         <div id="client-progress"></div>
+      </div>
+      <div class="col-lg-4">
+         <h2>Utilities</h2>
+         <div>
+            Set response code (currently {{code}}):
+            <form action="/" method="GET">
+               <div class="input-group">
+                  <input class="form-control" type="text" name="code" placeholder="Response code">
+                  <div class="input-group-append">
+                     <input class="btn btn-primary" type="submit">
+                  </div>
+               </div>
+            </form>
+         </div>
+         <hr>
+         <div>
+            Calculator (currently broken):
+            <form action="/" method="GET">
+               <div class="input-group">
+                  <input class="form-control" type="text" name="calc" placeholder="1 + 2 + eval(&quot;not that easy&quot;)">
+                  <div class="input-group-append">
+                     <input class="btn btn-primary btn-disabled" disabled="disabled" type="submit">
+                  </div>
+               </div>
+            </form>
+         </div>
+         <hr>
+         <div>
+            Chunked Encoding Test:
+            <br>
+            <button class="btn btn-primary" id="download-test" onclick="downloadTest();">Test Download</button>
+            <script type="text/javascript">
+               function downloadTest() {
+                  pfetch("assets/TS.py", {
+                     progress: (p) => {
+                        document.getElementById("download-progress").innerText = p + " bytes loaded";
+                     }
+                  }).then((conts) => {
+                     document.getElementById("download-progress").innerText = "Done!";
+                     downloadURL("data:text/plain;charset=utf-8," + encodeURIComponent(conts), "TS.py");
+                  });
+               }
+               function downloadBlob(data, fileName, mimeType) {
+                  let blob = new Blob([data], {
+                     type: mimeType
+                  });
+                  let url = window.URL.createObjectURL(blob);
+                  downloadURL(url, fileName);
+                  setTimeout(function () {
+                     return window.URL.revokeObjectURL(url);
+                  }, 1000);
+               }
+               function downloadURL(data, fileName) {
+                  let a = document.createElement('a');
+                  a.href = data;
+                  a.download = fileName;
+                  document.body.appendChild(a);
+                  a.style = 'display: none';
+                  a.click();
+                  a.remove();
+               }
+            </script>
+            <p id="download-progress"></p>
+         </div>
+      </div>
+      <div class="col-lg-4">
+         <h2>Public Directory Listing</h2>
+         <ul>
+            {{listing}}
+         </ul>
+      </div>
+   </div>
+   <div class="row">
+      <div id="image"></div>
+   </div>
+</div>

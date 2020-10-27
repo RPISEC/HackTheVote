@@ -1,0 +1,18 @@
+[package]
+name = "sbfos"
+version = "0.1.0"
+authors = ["Avi Weinstock <rpisec@aweinstock.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+openssl-sys = "0.9"
+libc = "0.2.74"
+
+[[bin]]
+name = "sbfos"
+path = "src/sbfos.rs"
+
+[profile.release]
+debug = true

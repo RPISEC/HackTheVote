@@ -1,0 +1,10 @@
+name = "insanity"
+tags = ["insanity"]
+category = "insanity"
+difficulty = "insanity"
+author = "RPISEC"
+state = "HI"
+description = """
+You will lose points for submitting this flag. https://discord.gg/8YRqcDX
+"""
+flag = "flag{stop_using_discord_for_ctfs}"

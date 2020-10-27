@@ -1,0 +1,10 @@
+name = "Web Starter Kit"
+tags = ["web", "reverse"]
+category = "reverse"
+difficulty = "hard"
+author = "glenns"
+state = "IA"
+description = """
+These politicians always seem to find the oldest technologies for their web servers. This time it seems like they contracted out to some game development company from Oregon back in 2004 and never upgraded their software! I guess that's one way to avoid modern revenue-sharing licenses...
+"""
+flag = "flag{sh4zb0t_1s_r0ughly_th3_c0rr3ct_s3nt1m3nt}"

@@ -1,0 +1,11 @@
+name = "Sign Of The Times 2"
+tags = ["thinking"]
+difficulty = "medium"
+author = "itszn"
+state = "NH"
+description = """
+We detected a virus that bypassed our signing system, but we have locked it down now...
+
+You will need the flag from Sign Of The Times 1 to access this challenge.
+"""
+flag = "flag{x86_64 more like x86_32 am i right}"

@@ -1,0 +1,10 @@
+name = "sanity"
+tags = ["sanity"]
+category = "sanity"
+difficulty = "sanity"
+author = "RPISEC"
+state = "AK"
+description = """
+flag{hack the vote}
+"""
+flag = "flag{hack the vote}"

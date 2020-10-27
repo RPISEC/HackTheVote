@@ -1,0 +1,13 @@
+name = "Electrostar 3"
+tags = ["pwn"]
+difficulty = "hard"
+author = "itszn"
+state = "CA"
+description = """
+Electrostar(TM) is a new secure modular userspace system which provides security for the upcoming election. We want you to try and find a weakness in the system and slowly work your way in. Our goal is complete compromise!
+
+This challenge is running on Ubuntu 18.04 with the provided libc.
+
+This is it! Escape the sandbox and run `flag3.exe`!
+"""
+flag = "flag{ipc what I did there? at least it wasn't mojo}"

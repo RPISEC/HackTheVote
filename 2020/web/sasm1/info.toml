@@ -1,0 +1,15 @@
+name = "SASM: Every Vote Counts"
+difficulty = "easy"
+author = "itszn"
+state = "MO"
+tags = ["reverse", "web"]
+category = "reverse"
+description = """
+Assembly in the web is the future, but WASM is too hard to use :(
+
+Luckily there is a new, **simpler** system: SASM!
+
+Cast your vote with our new SASM powered system!
+
+The flag for this challenge is at `/flagA`
+"""

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block head %}
+  <title>.dotfile builder</title>
+  {{ super() }}
+{% endblock %}
+
+{% block content %}
+<h1 class="title is-1">{{user.name}}'s {% if public %}Public {% endif %}Dotfiles</h1>
+<hr class="divide">
+{% if not public %}
+{% set count = user.dotfiles | length %}
+{% endif %}
+{% if count == 0 %}
+<div class="level" style="margin-top: 25%">
+  <div class="level-item">
+    {% if public %}
+    <p class="title is-size-1 has-text-grey-light">No public dotfiles :(</p>
+    {% else %}
+    <p class="title is-size-1">
+    <span class="has-text-grey-light">You have no dotfiles...</span>
+    <a href="/new" class="has-text-white">Create one now!</a></p>
+    {% endif %}
+  </div>
+</div>
+</div>
+{% else %}
+<div class="columns is-multiline is-mobile">
+{% for n,f in (user.dotfiles|dictsort) %}
+{% if not public or f.public %}
+<div class="column is-2 has-text-centered">
+{% if public %}
+<a href="/public/{{user._id}}/{{n}}">
+{% else %}
+<a href="/files/{{n}}">
+{% endif %}
+    <div class="box">
+        <b>{{f.name}}</b>
+    </div>
+</a>
+</div>
+{% endif %}
+{% endfor %}
+</div>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+{% endblock %}
+

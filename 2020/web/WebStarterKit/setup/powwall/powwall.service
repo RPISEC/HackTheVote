@@ -1,0 +1,13 @@
+[Unit]
+Description=gunicorn server for powwall
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/powwall
+Environment="PATH=/home/ubuntu/powwall/venv/bin"
+ExecStart=/home/ubuntu/powwall/venv/bin/gunicorn --workers 3 --bind unix:powwall.sock -m 007 server:app
+
+[Install]
+WantedBy=multi-user.target

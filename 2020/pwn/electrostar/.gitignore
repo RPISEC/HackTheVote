@@ -1,0 +1,5 @@
+*.o
+.gdb_history
+./sol/evil.img*
+*core*
+

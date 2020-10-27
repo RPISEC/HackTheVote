@@ -1,0 +1,13 @@
+name = "Early Voting 1"
+tags = ["reverse"]
+difficulty = "easy"
+author = "Lense"
+state = "AL"
+description = """
+We found an early testing build of Alabama's voting app. Their testing account is PaulineAAvery:oghaCh5ei, but it seems like they added some extra protections, because we can't seem to log in. Figure it out and vote to receive a flag.
+
+NOTE: this is an Android challenge. Brute forcing or trying anything weird with the web service won't help you.
+"""
+flag = "flag{Thanks for voting with Alabama's secure Android app!}"
+first_blood_washington = "Officials are surprised to see Washington receive thousands of votes before the Alabama voting window even opens"
+first_blood_lincoln = "Officials are surprised to see Lincoln receive thousands of votes before the Alabama voting window even opens"

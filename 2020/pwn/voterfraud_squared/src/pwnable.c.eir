@@ -1,0 +1,1124 @@
+	.text
+puts:
+	#{push:puts}
+	mov D, SP
+	add D, -1
+	store BP, D
+	mov SP, D
+	mov BP, SP
+	.file 1 "out/pwnable.c"
+	.loc 1 68 0
+	# }
+	.loc 1 66 0
+	#     }
+	.L0:
+	.loc 1 63 0
+	#         }
+	.loc 1 61 0
+	#         {
+	mov B, BP
+	add B, 2
+	load A, B
+	mov B, A
+	load A, B
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	mov A, 0
+	mov B, A
+	load A, SP
+	add SP, 1
+	eq A, B
+	jeq .L19, A, 0
+	.loc 1 63 0
+	#         }
+	jmp .L2
+	.L19:
+	.loc 1 66 0
+	#     }
+	mov B, BP
+	add B, 2
+	load A, B
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	add A, 1
+	mov B, BP
+	add B, 2
+	store A, B
+	load A, SP
+	add SP, 1
+	mov B, A
+	load A, B
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	putc A
+	add SP, 1
+	.L1:
+	jmp .L0
+	.L2:
+	.loc 1 68 0
+	# }
+	mov A, 10
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	putc A
+	add SP, 1
+	#{pop:puts}
+	mov SP, BP
+	load A, SP
+	add SP, 1
+	mov BP, A
+	load A, SP
+	add SP, 1
+	jmp A
+	.text
+gets:
+	#{push:gets}
+	mov D, SP
+	add D, -1
+	store BP, D
+	mov SP, D
+	mov BP, SP
+	sub SP, 2
+	.loc 1 91 0
+	# }
+	.loc 1 76 0
+	# 
+	mov A, 0
+	mov B, SP
+	.loc 1 68 0
+	# }
+	mov B, BP
+	add B, 2
+	load A, B
+	mov B, BP
+	add B, 16777215
+	store A, B
+	.loc 1 88 0
+	#     }
+	.L3:
+	.loc 1 80 0
+	# 
+	mov A, 0
+	mov B, SP
+	getc A
+	mov B, BP
+	add B, 16777214
+	store A, B
+	.loc 1 85 0
+	#         }
+	.loc 1 82 0
+	#         {
+	.loc 1 80 0
+	# 
+	mov B, BP
+	add B, 16777214
+	load A, B
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	.loc 1 82 0
+	#         {
+	mov A, 0
+	mov B, A
+	load A, SP
+	add SP, 1
+	eq A, B
+	mov B, 1
+	jne .L20, A, 0
+	.loc 1 80 0
+	# 
+	mov B, BP
+	add B, 16777214
+	load A, B
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	.loc 1 82 0
+	#         {
+	mov A, 10
+	mov B, A
+	load A, SP
+	add SP, 1
+	eq A, B
+	mov B, A
+	ne B, 0
+	.L20:
+	mov A, B
+	jeq .L21, A, 0
+	.loc 1 85 0
+	#         }
+	.loc 1 84 0
+	#             break;
+	mov A, 0
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	.loc 1 68 0
+	# }
+	mov B, BP
+	add B, 2
+	load A, B
+	mov C, A
+	load A, SP
+	mov B, A
+	mov A, C
+	store B, A
+	load A, SP
+	add SP, 1
+	.loc 1 85 0
+	#         }
+	jmp .L5
+	.L21:
+	.loc 1 88 0
+	#     }
+	.loc 1 80 0
+	# 
+	mov B, BP
+	add B, 16777214
+	load A, B
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	.loc 1 88 0
+	#     }
+	.loc 1 68 0
+	# }
+	mov B, BP
+	add B, 2
+	load A, B
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	add A, 1
+	mov B, BP
+	add B, 2
+	store A, B
+	load A, SP
+	add SP, 1
+	mov C, A
+	load A, SP
+	mov B, A
+	mov A, C
+	store B, A
+	load A, SP
+	add SP, 1
+	.loc 1 88 0
+	#     }
+	.L4:
+	jmp .L3
+	.L5:
+	.loc 1 91 0
+	# }
+	.loc 1 76 0
+	# 
+	mov B, BP
+	add B, 16777215
+	load A, B
+	mov B, A
+	#{pop:gets}
+	mov SP, BP
+	load A, SP
+	add SP, 1
+	mov BP, A
+	load A, SP
+	add SP, 1
+	jmp A
+	#{pop:gets}
+	mov SP, BP
+	load A, SP
+	add SP, 1
+	mov BP, A
+	load A, SP
+	add SP, 1
+	jmp A
+	.text
+read_word:
+	#{push:read_word}
+	mov D, SP
+	add D, -1
+	store BP, D
+	mov SP, D
+	mov BP, SP
+	sub SP, 7
+	.loc 1 137 0
+	# }
+	.loc 1 100 0
+	#     char buf[BYTES_IN_WORDS];
+	.loc 1 101 0
+	#     char ch;
+	.loc 1 102 0
+	# 
+	.loc 1 104 0
+	#     // Read in every byte
+	mov A, 57005
+	mov B, BP
+	add B, 16777215
+	store A, B
+	.loc 1 114 0
+	#     }
+	.loc 1 106 0
+	#     {
+	mov A, 0
+	mov B, SP
+	mov B, BP
+	add B, 16777211
+	mov A, 0
+	store A, B
+	.loc 1 114 0
+	#     }
+	.L6:
+	.loc 1 106 0
+	#     {
+	mov B, BP
+	add B, 16777211
+	load A, B
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	mov A, 2
+	mov B, A
+	load A, SP
+	add SP, 1
+	lt A, B
+	jeq .L22, A, 0
+	jmp .L23
+	.L22:
+	.loc 1 114 0
+	#     }
+	jmp .L8
+	.L23:
+	.loc 1 108 0
+	#         if (ch == EOF)
+	getc A
+	mov B, BP
+	add B, 16777212
+	store A, B
+	.loc 1 111 0
+	#         }
+	.loc 1 109 0
+	#         {
+	.loc 1 102 0
+	# 
+	mov B, BP
+	add B, 16777212
+	load A, B
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	.loc 1 109 0
+	#         {
+	mov A, 0
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	mov A, 1
+	mov B, A
+	load A, SP
+	add SP, 1
+	sub A, B
+	mov B, A
+	load A, SP
+	add SP, 1
+	eq A, B
+	jeq .L24, A, 0
+	.loc 1 111 0
+	#         }
+	jmp .L15
+	.L24:
+	.loc 1 114 0
+	#     }
+	.loc 1 102 0
+	# 
+	mov B, BP
+	add B, 16777212
+	load A, B
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	.loc 1 114 0
+	#     }
+	.loc 1 101 0
+	#     char ch;
+	mov A, BP
+	add A, 16777213
+	mov D, SP
+	add D, -1
+	store B, D
+	mov SP, D
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	.loc 1 114 0
+	#     }
+	mov A, 2
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	.loc 1 106 0
+	#     {
+	mov B, BP
+	add B, 16777211
+	load A, B
+	mov B, A
+	load A, SP
+	add SP, 1
+	sub A, B
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	.loc 1 114 0
+	#     }
+	mov A, 1
+	mov B, A
+	load A, SP
+	add SP, 1
+	sub A, B
+	mov B, A
+	load A, SP
+	add SP, 1
+	add A, B
+	mov C, A
+	load A, SP
+	add SP, 1
+	mov B, A
+	mov A, C
+	mov C, A
+	load A, SP
+	mov B, A
+	mov A, C
+	store B, A
+	load A, SP
+	add SP, 1
+	.L7:
+	.loc 1 106 0
+	#     {
+	mov B, BP
+	add B, 16777211
+	load A, B
+	add A, 1
+	mov B, BP
+	add B, 16777211
+	store A, B
+	.loc 1 114 0
+	#     }
+	jmp .L6
+	.L8:
+	.loc 1 117 0
+	#     for (int i = 0; i < BYTES_IN_WORDS; ++i)
+	mov A, 0
+	mov B, BP
+	add B, 16777215
+	store A, B
+	.loc 1 131 0
+	#         }
+	.loc 1 118 0
+	#     {
+	mov A, 0
+	mov B, SP
+	mov B, BP
+	add B, 16777210
+	mov A, 0
+	store A, B
+	.loc 1 131 0
+	#         }
+	.L9:
+	.loc 1 118 0
+	#     {
+	mov B, BP
+	add B, 16777210
+	load A, B
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	mov A, 2
+	mov B, A
+	load A, SP
+	add SP, 1
+	lt A, B
+	jeq .L25, A, 0
+	jmp .L26
+	.L25:
+	.loc 1 131 0
+	#         }
+	jmp .L11
+	.L26:
+	.loc 1 121 0
+	#         {
+	.loc 1 118 0
+	#     {
+	mov B, BP
+	add B, 16777210
+	load A, B
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	.loc 1 121 0
+	#         {
+	mov A, 2
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	mov A, 1
+	mov B, A
+	load A, SP
+	add SP, 1
+	sub A, B
+	mov B, A
+	load A, SP
+	add SP, 1
+	lt A, B
+	jeq .L27, A, 0
+	.loc 1 125 0
+	#             }
+	.loc 1 123 0
+	#             {
+	mov A, 0
+	mov B, SP
+	mov B, BP
+	add B, 16777209
+	mov A, 0
+	store A, B
+	.loc 1 125 0
+	#             }
+	.L12:
+	.loc 1 123 0
+	#             {
+	mov B, BP
+	add B, 16777209
+	load A, B
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	mov A, 256
+	mov B, A
+	load A, SP
+	add SP, 1
+	lt A, B
+	jeq .L28, A, 0
+	jmp .L29
+	.L28:
+	.loc 1 125 0
+	#             }
+	jmp .L14
+	.L29:
+	.loc 1 100 0
+	#     char buf[BYTES_IN_WORDS];
+	mov B, BP
+	add B, 16777215
+	load A, B
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	.loc 1 125 0
+	#             }
+	.loc 1 101 0
+	#     char ch;
+	mov A, BP
+	add A, 16777213
+	mov D, SP
+	add D, -1
+	store B, D
+	mov SP, D
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	.loc 1 118 0
+	#     {
+	mov B, BP
+	add B, 16777210
+	load A, B
+	mov B, A
+	load A, SP
+	add SP, 1
+	add A, B
+	mov C, A
+	load A, SP
+	add SP, 1
+	mov B, A
+	mov A, C
+	mov B, A
+	load A, B
+	mov B, A
+	load A, SP
+	add SP, 1
+	add A, B
+	mov B, BP
+	add B, 16777215
+	store A, B
+	.loc 1 125 0
+	#             }
+	.L13:
+	.loc 1 123 0
+	#             {
+	mov B, BP
+	add B, 16777209
+	load A, B
+	add A, 1
+	mov B, BP
+	add B, 16777209
+	store A, B
+	.loc 1 125 0
+	#             }
+	jmp .L12
+	.L14:
+	jmp .L30
+	.L27:
+	.loc 1 131 0
+	#         }
+	.loc 1 100 0
+	#     char buf[BYTES_IN_WORDS];
+	mov B, BP
+	add B, 16777215
+	load A, B
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	.loc 1 131 0
+	#         }
+	.loc 1 101 0
+	#     char ch;
+	mov A, BP
+	add A, 16777213
+	mov D, SP
+	add D, -1
+	store B, D
+	mov SP, D
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	.loc 1 118 0
+	#     {
+	mov B, BP
+	add B, 16777210
+	load A, B
+	mov B, A
+	load A, SP
+	add SP, 1
+	add A, B
+	mov C, A
+	load A, SP
+	add SP, 1
+	mov B, A
+	mov A, C
+	mov B, A
+	load A, B
+	mov B, A
+	load A, SP
+	add SP, 1
+	add A, B
+	mov B, BP
+	add B, 16777215
+	store A, B
+	.L30:
+	.loc 1 131 0
+	#         }
+	.L10:
+	.loc 1 118 0
+	#     {
+	mov B, BP
+	add B, 16777210
+	load A, B
+	add A, 1
+	mov B, BP
+	add B, 16777210
+	store A, B
+	.loc 1 131 0
+	#         }
+	jmp .L9
+	.L11:
+	.loc 1 135 0
+	#     *w = temp;
+	.L15:
+	.loc 1 100 0
+	#     char buf[BYTES_IN_WORDS];
+	mov B, BP
+	add B, 16777215
+	load A, B
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	.loc 1 91 0
+	# }
+	mov B, BP
+	add B, 2
+	load A, B
+	mov C, A
+	load A, SP
+	mov B, A
+	mov A, C
+	store B, A
+	load A, SP
+	add SP, 1
+	.loc 1 137 0
+	# }
+	.loc 1 102 0
+	# 
+	mov B, BP
+	add B, 16777212
+	load A, B
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	.loc 1 137 0
+	# }
+	mov A, 0
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	mov A, 1
+	mov B, A
+	load A, SP
+	add SP, 1
+	sub A, B
+	mov B, A
+	load A, SP
+	add SP, 1
+	ne A, B
+	mov B, A
+	#{pop:read_word}
+	mov SP, BP
+	load A, SP
+	add SP, 1
+	mov BP, A
+	load A, SP
+	add SP, 1
+	jmp A
+	#{pop:read_word}
+	mov SP, BP
+	load A, SP
+	add SP, 1
+	mov BP, A
+	load A, SP
+	add SP, 1
+	jmp A
+	.text
+go:
+	#{push:go}
+	mov D, SP
+	add D, -1
+	store BP, D
+	mov SP, D
+	mov BP, SP
+	sub SP, 28
+	.loc 1 166 0
+	#     }
+	.loc 1 145 0
+	#     int state;
+	.loc 1 146 0
+	#     int ok;
+	.loc 1 147 0
+	#     int i;
+	.loc 1 148 0
+	# 
+	.loc 1 150 0
+	#     if (!ok || data[0] != MAGIC_START)
+	.loc 1 145 0
+	#     int state;
+	mov A, BP
+	add A, 16777192
+	mov D, SP
+	add D, -1
+	store B, D
+	mov SP, D
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	.loc 1 150 0
+	#     if (!ok || data[0] != MAGIC_START)
+	mov A, 0
+	mov B, A
+	load A, SP
+	add SP, 1
+	add A, B
+	mov C, A
+	load A, SP
+	add SP, 1
+	mov B, A
+	mov A, C
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	mov A, .L31
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	jmp read_word
+	.L31:
+	mov A, B
+	add SP, 1
+	mov B, BP
+	add B, 16777190
+	store A, B
+	.loc 1 153 0
+	#     }
+	.loc 1 151 0
+	#     {
+	.loc 1 147 0
+	#     int i;
+	mov B, BP
+	add B, 16777190
+	load A, B
+	eq A, 0
+	mov B, 1
+	jne .L32, A, 0
+	.loc 1 151 0
+	#     {
+	.loc 1 145 0
+	#     int state;
+	mov A, BP
+	add A, 16777192
+	mov D, SP
+	add D, -1
+	store B, D
+	mov SP, D
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	.loc 1 151 0
+	#     {
+	mov A, 0
+	mov B, A
+	load A, SP
+	add SP, 1
+	add A, B
+	mov C, A
+	load A, SP
+	add SP, 1
+	mov B, A
+	mov A, C
+	mov B, A
+	load A, B
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	mov A, 26952
+	mov B, A
+	load A, SP
+	add SP, 1
+	ne A, B
+	mov B, A
+	ne B, 0
+	.L32:
+	mov A, B
+	jeq .L33, A, 0
+	.loc 1 153 0
+	#     }
+	#{pop:go}
+	mov SP, BP
+	load A, SP
+	add SP, 1
+	mov BP, A
+	load A, SP
+	add SP, 1
+	jmp A
+	.L33:
+	.loc 1 166 0
+	#     }
+	.loc 1 156 0
+	#     {
+	mov A, 0
+	mov B, BP
+	add B, 16777189
+	store A, B
+	.loc 1 166 0
+	#     }
+	.L16:
+	.loc 1 147 0
+	#     int i;
+	mov B, BP
+	add B, 16777190
+	load A, B
+	jeq .L34, A, 0
+	jmp .L35
+	.L34:
+	.loc 1 166 0
+	#     }
+	jmp .L18
+	.L35:
+	.loc 1 158 0
+	#         ok = read_word(&temp);
+	.loc 1 159 0
+	# 
+	mov A, BP
+	add A, -28
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	mov A, .L36
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	jmp read_word
+	.L36:
+	mov A, B
+	add SP, 1
+	mov B, BP
+	add B, 16777190
+	store A, B
+	.loc 1 163 0
+	#         }
+	.loc 1 161 0
+	#         {
+	.loc 1 158 0
+	#         ok = read_word(&temp);
+	mov B, BP
+	add B, 16777188
+	load A, B
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	.loc 1 161 0
+	#         {
+	mov A, 31074
+	mov B, A
+	load A, SP
+	add SP, 1
+	eq A, B
+	jeq .L37, A, 0
+	.loc 1 163 0
+	#         }
+	jmp .L18
+	.L37:
+	.loc 1 166 0
+	#     }
+	.loc 1 158 0
+	#         ok = read_word(&temp);
+	mov B, BP
+	add B, 16777188
+	load A, B
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	.loc 1 166 0
+	#     }
+	.loc 1 145 0
+	#     int state;
+	mov A, BP
+	add A, 16777192
+	mov D, SP
+	add D, -1
+	store B, D
+	mov SP, D
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	.loc 1 148 0
+	# 
+	mov B, BP
+	add B, 16777189
+	load A, B
+	mov B, A
+	load A, SP
+	add SP, 1
+	add A, B
+	mov C, A
+	load A, SP
+	add SP, 1
+	mov B, A
+	mov A, C
+	mov C, A
+	load A, SP
+	mov B, A
+	mov A, C
+	store B, A
+	load A, SP
+	add SP, 1
+	.loc 1 166 0
+	#     }
+	.L17:
+	.loc 1 156 0
+	#     {
+	.loc 1 148 0
+	# 
+	mov B, BP
+	add B, 16777189
+	load A, B
+	add A, 1
+	mov B, BP
+	add B, 16777189
+	store A, B
+	.loc 1 166 0
+	#     }
+	jmp .L16
+	.L18:
+	#{pop:go}
+	mov SP, BP
+	load A, SP
+	add SP, 1
+	mov BP, A
+	load A, SP
+	add SP, 1
+	jmp A
+	.text
+main:
+	#{push:main}
+	mov D, SP
+	add D, -1
+	store BP, D
+	mov SP, D
+	mov BP, SP
+	sub SP, 33
+	.loc 1 187 0
+	# }
+	.loc 1 175 0
+	#     char *msg;
+	.loc 1 176 0
+	# 
+	.loc 1 178 0
+	# 
+	.loc 1 175 0
+	#     char *msg;
+	mov A, BP
+	add A, 16777184
+	mov D, SP
+	add D, -1
+	store B, D
+	mov SP, D
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	.loc 1 178 0
+	# 
+	mov A, 0
+	mov B, A
+	load A, SP
+	add SP, 1
+	add A, B
+	mov C, A
+	load A, SP
+	add SP, 1
+	mov B, A
+	mov A, C
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	mov A, .L38
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	jmp gets
+	.L38:
+	mov A, B
+	add SP, 1
+	.loc 1 180 0
+	#     puts(msg);
+.data
+	.L39:
+	.string "Premier Election Solutions Administrative Voter Correction Subchannel>>"
+.text
+	mov A, .L39
+	mov B, BP
+	add B, 16777183
+	store A, B
+	.loc 1 181 0
+	#     go();
+	.loc 1 176 0
+	# 
+	mov B, BP
+	add B, 16777183
+	load A, B
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	mov A, .L40
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	jmp puts
+	.L40:
+	mov A, B
+	add SP, 1
+	.loc 1 182 0
+	# 
+	mov A, .L41
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	jmp go
+	.L41:
+	mov A, B
+	.loc 1 184 0
+	#     puts(msg);
+.data
+	.L42:
+	.string ">>Erroneous votes corrected. Thank you for safeguarding democracy."
+.text
+	mov A, .L42
+	mov B, BP
+	add B, 16777183
+	store A, B
+	.loc 1 185 0
+	# 
+	.loc 1 176 0
+	# 
+	mov B, BP
+	add B, 16777183
+	load A, B
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	mov A, .L43
+	mov D, SP
+	add D, -1
+	store A, D
+	mov SP, D
+	jmp puts
+	.L43:
+	mov A, B
+	add SP, 1
+	.loc 1 187 0
+	# }
+	mov A, 0
+	mov B, A
+	#{pop:main}
+	exit
+	#{pop:main}
+	exit

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RadioGroup
+        android:id="@+id/vote_selection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <RadioButton
+            android:id="@+id/lincolnButton"
+            android:text="@string/abraham_lincoln" />
+
+        <RadioButton
+            android:id="@+id/washingtonButton"
+            android:text="@string/george_washington" />
+
+        <RadioButton
+            android:id="@+id/abstainButton"
+            android:text="@string/abstain" />
+    </RadioGroup>
+</androidx.constraintlayout.widget.ConstraintLayout>

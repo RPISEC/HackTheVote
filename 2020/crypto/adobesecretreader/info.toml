@@ -1,0 +1,9 @@
+name = "Adobe Secret Reader"
+tags = ["crypto", "forensics"]
+difficulty = "easy"
+author = "polarbits"
+state = "VA"
+description="""
+Last week we managed to tap the connection between a voting location and the state's central voting database. It's been spitting stuff back at us over the wire, but whatever's being sent is formatted strangely. Help us figure out what's in the data we captured.
+"""
+flag = "flag{0bfu5c4t10n_0nly_g3ts_y0u_s0_f4r}"

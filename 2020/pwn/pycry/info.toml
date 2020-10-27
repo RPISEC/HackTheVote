@@ -1,0 +1,15 @@
+name = "pycry"
+tags = ["pwn"]
+difficulty = "medium"
+author = "pernicious"
+state = "AZ"
+description = """
+Our great nation is proudly built upon unmaintained and deprecated software.
+
+In the past, the campaign committees have had several incidents involving bad
+crypto, specifically primes that were in fact not prime, so they've provided
+this service so people can rest easy knowing just how prime their primes are.
+"""
+flag = "flag{s1mpl3r_t1m3s_w1th_s1mpl3r_str1ng5}"
+first_blood_washington = "Cyber attacks plague Lincoln campaign, outdated software deemed the culprit"
+first_blood_lincoln = "Cyber attacks plague Washington campaign, outdated software deemed the culprit"

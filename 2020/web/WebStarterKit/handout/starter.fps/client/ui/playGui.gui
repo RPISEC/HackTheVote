@@ -1,0 +1,178 @@
+
+
+//--- OBJECT WRITE BEGIN ---
+new GameTSCtrl(PlayGui) {
+   profile = "GuiContentProfile";
+   horizSizing = "right";
+   vertSizing = "bottom";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   helpTag = "0";
+      noCursor = "1";
+
+   new GuiBitmapCtrl(CenterPrintDlg) {
+      profile = "CenterPrintProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "45 230";
+      extent = "550 20";
+      minExtent = "8 8";
+      visible = "0";
+      helpTag = "0";
+      bitmap = "./hudfill.png";
+      wrap = "0";
+
+      new GuiMLTextCtrl(CenterPrintText) {
+         profile = "CenterPrintTextProfile";
+         horizSizing = "center";
+         vertSizing = "center";
+         position = "0 0";
+         extent = "546 12";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+      };
+   };
+   new GuiBitmapCtrl(BottomPrintDlg) {
+      profile = "CenterPrintProfile";
+      horizSizing = "center";
+      vertSizing = "top";
+      position = "45 375";
+      extent = "550 20";
+      minExtent = "8 8";
+      visible = "0";
+      helpTag = "0";
+      bitmap = "./hudfill.png";
+      wrap = "0";
+
+      new GuiMLTextCtrl(BottomPrintText) {
+         profile = "CenterPrintTextProfile";
+         horizSizing = "center";
+         vertSizing = "center";
+         position = "0 0";
+         extent = "546 12";
+         minExtent = "8 8";
+         visible = "1";
+         helpTag = "0";
+         lineSpacing = "2";
+         allowColorChars = "0";
+         maxChars = "-1";
+      };
+   };
+   new GuiBitmapCtrl(LagIcon) {
+      profile = "GuiDefaultProfile";
+      horizSizing = "right";
+      vertSizing = "bottom";
+      position = "572 3";
+      extent = "32 32";
+      minExtent = "8 8";
+      visible = "0";
+      helpTag = "0";
+      bitmap = "./lagIcon.png";
+      wrap = "0";
+   };
+   new GuiShapeNameHud() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "width";
+      vertSizing = "height";
+      position = "0 0";
+      extent = "653 485";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      fillColor = "0.000000 0.000000 0.000000 0.250000";
+      frameColor = "0.000000 1.000000 0.000000 1.000000";
+      textColor = "0.000000 1.000000 0.000000 1.000000";
+      showFill = "0";
+      showFrame = "0";
+      verticalOffset = "0.2";
+      distanceFade = "0.1";
+         damageFrameColor = "1.000000 0.600000 0.000000 1.000000";
+         damageFillColor = "0.000000 1.000000 0.000000 1.000000";
+         damageRect = "30 4";
+   };
+   new GuiHealthBarHud() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "right";
+      vertSizing = "top";
+      position = "14 315";
+      extent = "26 138";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      showFill = "1";
+      displayEnergy = "0";
+      showFrame = "1";
+      fillColor = "0.000000 0.000000 0.000000 0.500000";
+      frameColor = "0.000000 1.000000 0.000000 0.000000";
+      damageFillColor = "0.800000 0.000000 0.000000 1.000000";
+      pulseRate = "1000";
+      pulseThreshold = "0.5";
+         value = "1";
+   };
+   new GuiCrossHairHud() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "center";
+      vertSizing = "center";
+      position = "304 224";
+      extent = "32 32";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      bitmap = "./crossHair";
+      wrap = "0";
+      damageFillColor = "0.000000 1.000000 0.000000 1.000000";
+      damageFrameColor = "1.000000 0.600000 0.000000 1.000000";
+      damageRect = "50 4";
+      damageOffset = "0 10";
+   };
+   new GuiBitmapCtrl() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "right";
+      vertSizing = "top";
+      position = "11 299";
+      extent = "32 172";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      bitmap = "./healthBar";
+      wrap = "0";
+   };
+   new GuiHealthBarHud() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "right";
+      vertSizing = "top";
+      position = "53 315";
+      extent = "26 138";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      showFill = "1";
+      displayEnergy = "1";
+      showFrame = "1";
+      fillColor = "0.000000 0.000000 0.000000 0.500000";
+      frameColor = "0.000000 1.000000 0.000000 0.000000";
+      damageFillColor = "0.000000 0.000000 0.800000 1.000000";
+      pulseRate = "1000";
+      pulseThreshold = "0.5";
+         value = "1";
+   };
+   new GuiBitmapCtrl() {
+      profile = "GuiDefaultProfile";
+      horizSizing = "right";
+      vertSizing = "top";
+      position = "50 299";
+      extent = "32 172";
+      minExtent = "8 8";
+      visible = "1";
+      helpTag = "0";
+      bitmap = "./healthBar";
+      wrap = "0";
+   };
+};
+//--- OBJECT WRITE END ---

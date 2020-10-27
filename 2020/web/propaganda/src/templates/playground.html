@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+Welcome to the propaganda playground, where you can play in the js sandbox with all the other kiddos
+</div>
+{% if payload %}
+    <div>
+        Your last payload: <script>{{ payload }}</script>
+    </div>
+{% endif %}
+{% endblock %}

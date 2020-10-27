@@ -1,0 +1,16 @@
+name = "Early Voting 2"
+tags = ["reverse"]
+difficulty = "medium"
+author = "Lense"
+state = "GA"
+description = """
+Next up, Georgia's voting app. We believe that they have patched out some core functionality, but you might be able to recover it. The testing account this time is BrandonJPatterson:loob1Quiep.
+
+NOTE: this is an Android challenge. Brute forcing or trying anything weird with the web service won't help you.
+
+Hint: not including checksums and signatures, there are 10 bytes patched across 3 locations.
+"""
+# The hint was added on the second day of the competition
+flag = "flag{patching didn't help very much, did it}"
+first_blood_washington = "Georgia officials are shocked to see Washington receive thousands of early votes after they were assured that the problem in Alabama was fixed"
+first_blood_lincoln = "Georgia officials are shocked to see Lincoln receive thousands of early votes after they were assured that the problem in Alabama was fixed"

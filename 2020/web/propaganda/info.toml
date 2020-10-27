@@ -1,0 +1,15 @@
+name = "Propaganda"
+tags = ["web", "thinking"]
+difficulty = "hard"
+author = "negasora"
+state = "WI"
+description = """
+The G\\*v\\*rnm*nt went TOO far, duder.
+They're in our MEMES, man.
+I'm TELLIN' YOU we GOTTA stop them.
+Cordially,
+    xX420_k1NGXx
+"""
+flag = "flag{unst0pp4ble_r3direct_m33ts_imm0v4ble_br0wser}"
+first_blood_washington = "Washington wins Wisconsin with weird web... images"
+first_blood_lincoln = "Lincoln wins over Wisconsinites by pointing out clear parallel between deep-fried cheese and deep-fried memes"

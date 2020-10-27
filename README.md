@@ -1,43 +1,10 @@
-Hack The Vote 2016
-===
-# Overview
+# Hack The Vote
 
-Hack The Vote was a 48 hour Jeopardy style computer security Capture The Flag (CTF) organized and run by [RPISEC](https://rpis.ec) on November 4th, 2016. Competitors solved challenges from a number of different common categories, including: cryptography, binary exploitation, reverse engineering, forensics and web exploitation. 
+Hack The Vote is a 48 hour Jeopardy style computer security Capture The Flag (CTF) competition organized and run by [RPISEC](https://rpis.ec) in 2016 and 2020. The CTFs have been themed in the spirit of US Presidential Elections, serving as a commentary on the ever evolving role of technology, cyber security, and hacking in modern political elections around the globe.
 
-<p align="center">
-<br>
-<img src="/board.png" alt="Challenge board"/>
-</p>
+For more information and challenges (including source, setup scripts, and solution scripts) from each competition:
 
-The CTF was themed in the spirit of the then ongoing 2016 US Presidential Election, serving as a commentary on the ever evolving role of technology, cyber security, and hacking in modern political elections around the globe.
+- [2016 edition](2016)
+- [2020 edition](2020)
 
-If there are any challenges, solutions, setup scripts (etc...) that are broken (or missing), please feel free to file an issue, or drop by our [IRC](https://rpis.ec/irc).
-
-## Statistics
-|  |  |
-| --- | --- |
-| Teams registered | 1928 |
-| Teams scored: | 1032 |
-| Sanity solves | 988 |
-| Insanity solves | 114 |
-| Correct flags | 2911 |
-| Incorrect flags | 14971 |
-| Points available | 10051 |
-| 1st place points | 5651 |
-| Number of challs | 37 (without sanity+insanity) |
-| 1st place challs solved | 25 |
-|Unsolved challenges | Tetrump Ultimate (so close) |
-
-<p align="center">
-<b>Solves by challenge</b>
-<br>
-<img src="/solves.png" alt="Solves by challenge"/>
-</p>
-
-# Acknowledgements
-We hope you had fun playing Hack the Vote! We had a great time running the CTF and chatting with the hundreds of individuals who joined us on IRC for the duration of the event. We appreciate all the constructive feedback we've received and were thrilled by the outcome of hosting our first CTF. Thank you to all those who participated.
-
-Special thanks to everyone who contributed their time or challenges to the CTF.
-
-## Organizers
-Patrick Biernat, Nick Burnett, Maxfield Chen, Branden Clark, Jack Dates, Gwen Diebold, Kareem El-Faramawi, Andrew Fasano, Josh Ferrell, Daniel Fitzgerald, Markus Gaasedelen, Jassiem Ifill, Andrew Marumoto, Wyler McAninch-Ruenzi, Austin Ralls, Kibo Schaffer, Galen Schretlen, Aaron Sedlacek, Max Shavrick, Avi Weinstock
+If anything is broken or missing, please feel free to file an issue, drop by our [IRC](https://rpis.ec/irc) or #hackthevote on Freenode, or send an email to htv at rpis.ec.

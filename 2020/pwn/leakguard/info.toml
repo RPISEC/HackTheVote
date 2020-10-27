@@ -1,0 +1,14 @@
+name = "leakguard"
+tags = ["pwn"]
+difficulty = "medium"
+author = "pernicious"
+state = "UT"
+description = """
+We've discovered that both candidates are selling limited edition, face-mold
+commemorative candles to the rich and famous as fundraising. Both are going through
+the same candle shop, which apparently has an online manufacturing system. Don't
+ask why, just get in there and make one of the candidate's candles all smell like rotten durian (teen spirit would work too).
+"""
+flag = "flag{m1t1g4ti0n_equ4l5_bug_wh0_kn3w}"
+first_blood_washington = "Utah debate evacuated, malignant odors from Lincoln-bust-shaped candles; Possible assassination attempt, officials investigating"
+first_blood_lincoln = "Utah debate evacuated, malignant odors from Washington-bust-shaped candles; Possible assassination attempt, officials investigating"

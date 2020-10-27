@@ -1,0 +1,8 @@
+{
+    "secret_key": "ec460209c644640a46f846e29108468abdd44a1ef0178396e64118d3fabc4a27",
+    "bot_secret": "dc72b063025c212060099935f583585053cac38ad41e9f29798008511713758b",
+    "hash_suffix_bytes": 3,
+    "local_server_url": "http://127.0.0.1:8000",
+    "redis_host": "localhost",
+    "redis_port": 6666
+}

@@ -1,0 +1,68 @@
+<html>
+  <head>
+    {% block head %}
+    <link href="/static/css/app.css" rel="stylesheet">
+    {% endblock %}
+  </head>
+  <body>
+	<nav class="navbar" role="navigation" aria-label="main navigation">
+	  <div class="navbar-brand">
+		<a class="navbar-item" href="/">
+          <span class="title has-text-black is-size-3">DotLocker</span>
+		</a>
+		<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+		  <span aria-hidden="true"></span>
+		  <span aria-hidden="true"></span>
+		  <span aria-hidden="true"></span>
+		</a>
+	  </div>
+	  <div id="navbarBasicExample" class="navbar-menu">
+		<div class="navbar-start">
+		  <a class="navbar-item" href="/files">
+			My Dotfiles
+		  </a>
+
+		  <a class="navbar-item" href="/new">
+              New Dotfile
+		  </a>
+
+		  <div class="navbar-item has-dropdown is-hoverable">
+			<a class="navbar-link">
+			  Create From Template
+			</a>
+
+			<div class="navbar-dropdown">
+			  <a class="navbar-item" href="/new/etc/skel/.bashrc">
+                  .bashrc
+			  </a>
+			  <a class="navbar-item" href="/new/etc/skel/.bash_logout">
+                  .bash_logout
+			  </a>
+			  <a class="navbar-item" href="/new/etc/skel/.profile">
+                  .profile
+			  </a>
+			</div>
+		  </div>
+		</div>
+
+		<div class="navbar-end">
+		  <div class="navbar-item">
+			<div class="buttons">
+                <form action="/search" method="POST" style="display:contents; margin-bottom: 5px">
+                <input class="input" name="name" placeholder="Search for user" style="margin-bottom: 8px">
+                </form>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</nav>
+
+    <div class="container" style="margin-top: 25px">
+      {% block content %}
+      {% endblock %}
+    </div>
+    {% block scripts %}
+    <script src="/static/js/jquery-3.4.1.min.js"></script>
+    {% endblock %}
+  </body>
+</html>

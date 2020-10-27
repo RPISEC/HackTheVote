@@ -1,0 +1,13 @@
+name = "Electrostar 2"
+tags = ["pwn"]
+difficulty = "medium"
+author = "itszn"
+state = "OR"
+description = """
+Electrostar(TM) is a new secure modular userspace system which provides security for the upcoming election. We want you to try and find a weakness in the system and slowly work your way in. Our goal is complete compromise!
+
+This challenge is running on Ubuntu 18.04 with the provided libc.
+
+Hint: For flag2 you may want to recover the private key...
+"""
+flag = "flag{https://www.youtube.com/watch?v=bg6-LVCHmGM&t=3929}"

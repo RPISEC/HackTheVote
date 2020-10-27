@@ -1,0 +1,9 @@
+name = "Sign Of The Times"
+tags = ["thinking"]
+difficulty = "easy"
+author = "itszn"
+state = "VT"
+description = """
+With election security more important than ever, we have devised a method of signing linux binaries. This will protect systems from tampering when the election comes around!
+"""
+flag = "flag{polymorphic virus beats static av every time}"

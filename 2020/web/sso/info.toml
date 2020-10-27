@@ -1,0 +1,10 @@
+name = "SuperSecureObstruction"
+tags = ["web"]
+difficulty = "medium"
+author = "itszn"
+state = "MN"
+description = """
+We found a site that has been hosting leaked files. They seem to be using an SSO system to help protect the identy of their users. We need to you hack the admin and steal their information! Good luck!
+
+(Note: The admin is logged into SSO but not into the main site)
+"""

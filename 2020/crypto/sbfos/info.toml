@@ -1,0 +1,11 @@
+name = "sbfos"
+tags = ["crypto", "reverse"]
+difficulty = "medium"
+author = "aweinstock"
+state = "PA"
+description = """
+We found the binary and partial source for a secure boot environment for an obscure architecture that some voting machines will be running. Once the secure boot is bypassed, agents can deploy it per-precinct to hack the vote in favour of `{Lincoln, Washington}`.
+"""
+flag = "flag{W4s_7h3_n0nc3_reus3_suffic13ntly_sub7le?}"
+first_blood_washington = "Washington wins multiple Lincoln-leaning districts in Pennsylvania by a slight edge. Voting machines suspected, but all firmware was properly signed."
+first_blood_lincoln = "Lincoln wins multiple Washington-leaning districts in Pennsylvania by a slight edge. Voting machines suspected, but all firmware was properly signed."

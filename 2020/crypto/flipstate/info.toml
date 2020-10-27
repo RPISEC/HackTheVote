@@ -1,0 +1,19 @@
+name = "Flip State"
+tags = ["crypto"]
+difficulty = "easy"
+author = "itszn"
+state = "OH"
+description = """
+We want you to devise a new secure method of encrypting votes which does not rely
+on any sort of key (that way the baddies can't steal the key!). Also the bureaucrats
+have been reading some crypto blogs and want you to do it with only a single bit
+flip on some random data. They assure us that you can do it as you are an expert
+after all :)
+
+To get the flag you must successfully encrypt and decrypt 20000 votes in a row.
+
+Note: You are not supposed to escape the sandbox, you are supposed to pass the checks.
+
+Good luck :)
+"""
+flag = "flag{turns out encoding is not the same as encryption...}"

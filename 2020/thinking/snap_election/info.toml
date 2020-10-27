@@ -1,0 +1,9 @@
+name = "Snap Election"
+tags = ["0day", "pwn", "web", "thinking"]
+category = "0day"
+difficulty = "medium"
+author = "itszn"
+state = "ME"
+description = """
+We need to use a legacy ballot counting system, but for security we have updated the components to use the newest modern sandboxing and dependency managing system
+"""

@@ -1,0 +1,9 @@
+name = "Hash Consulting"
+tags = ["forensics", "crypto"]
+difficulty = "easy"
+author = "Lense"
+state = "KY"
+description = """
+At Voter Security Inc., our hashes keep getting cracked. To find out why, we had a series of meetings shifting the blame around. Then we decided to put off accepting responsibility by hiring consultants instead. We'd like to pay you a large amount of money to write a proof of concept that recovers rulesets.
+"""
+flag = "flag{nice work. here's $5}"

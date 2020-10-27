@@ -1,0 +1,333 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<title>Realm Wars - Milestone Zero - Test Release - Version 0.0.1</title>
+<html>
+
+<body>
+<!-------------------------------------------------------->
+
+<h1>FPS Starter Kit</h1>
+<h2>A First Person Shooter Example</h2>
+
+<p>
+This starter kit is a simple example game for you to use in building your own game. This kit is not a complete game in itself, but does illustrate basic play mechanics as well as provide example art.
+<p>
+
+<ul>
+	<li><a href="#overview">Overview</a>
+	<li><a href="#gg">GarageGames</a>
+	<li><a href="#torque">Torque Game Engine</a>
+	<li><a href="#requirements" >System Requirements</a>
+	<ul>
+		<li><a href="#win32">Win32</a>
+		<li><a href="#mac">Mac OS</a>
+		<li><a href="#unix">Linux</a>
+	</ul>
+	<li><a href="#runapp" >Running the Application</a>
+	<ul>
+		<li><a href="#synopsis">Command Line Arguments</a>
+		<li><a href="#keys">Keybindings</a>
+	</ul>
+</ul>
+</p>
+
+<hr><h3 id="#overview">Overview</h3>
+<p>
+Individual starter kits are built for different styles of games, this particular one is geared towards the standard first person shooter (such as Doom, Quake, Half-Life, etc.)  This kit provides the following:
+</p>
+<ul>
+	<li>A basic user interface
+	<li>An animated orc player
+	<li>A crossbow weapon
+	<li>Two orc cottages
+	<li>A terrain tile set
+	<li>Water textures
+	<li>Sky box and cloud set
+	<li>A mission which puts it all together
+</ul>
+<p>
+The flexibility of the Torque Game Engine can make it a little overwhelming, and having the right starter kit for the project you have in mind can make a big difference. If you are not working on a first person shooter, you can check the <a href="http://www.garagegames.com/index.php?sec=mg&mod=home&page=news">GarageGames</a> web site to determin what other starter kits are available.
+</p>
+
+<hr><h3 id="#gg">GarageGames</h3>
+<p>
+<a href="http://www.garagegames.com">GarageGames.com</a> is a unique Internet
+publishing label for independent games and gamemakers. We are a band of
+professional gaming industry veterans committed to publishing truly
+original and exciting titles on our own terms.   Our
+<a href="http://www.garagegames.com/index.php?sec=main&mod=company&page=mission">mission</a>?
+To provide the independent developer with tools, knowledge,
+co-conspirators - whatever is needed to unleash the creative spirit and
+get great innovative independent games to market.
+</p>
+
+<hr><h3 id="#torque">Torque Game Engine</h3>
+<p>
+The
+<a href="http://www.garagegames.com/index.php?sec=mg&mod=v12&page=news">Torque Game
+Engine</a> (TGE) is the game engine that powers Tribes 2 developed by
+Dynamix. TGE is a full featured AAA title engine with the latest in
+scripting, geometry, particle effects, animation and texturing, as well
+as award winning multi-player networking code. Check out the
+<a href="http://www.garagegames.com/index.php?sec=mg&mod=v12&page=features">feature
+list</a> for more details.  For $100 per programmer, you get the source
+to the engine of a major product from a major game publisher! Not
+possible? Check the
+<a href="http://www.garagegames.com/index.php?sec=mg&mod=resource&page=category&qid=118">FAQ</a>
+for the details.
+</p>
+
+
+<hr><h3 id="#requirements">System Requirements</h3>
+<p>
+The application is released on both the Windows (Windows 98/SE/ME/2K/XP) and
+Mac (OS 8/9/10) platforms. See the following OS specific sections for more information.
+</p>
+
+<h4 id="win32">Windows</h4>
+<p>
+	Under windows the engine will run either OpenGL or DirectX.
+	OpenGL and DirectX drivers are typically bundled together by
+	video card manufactureres and are constantly being updated. Make sure
+	you have the latest drivers for your particular video card.
+</p>
+<p>
+<dl>
+	<dt>Required Hardware:
+		<dd>
+		<ul>
+			<li>Pentium II/400 - AMD/400 (or better), 128MB RAM, 20+GB HD
+			<li>Windows 98/NT4+SP3/2K/XP
+			<li>AGP Radeon or GeForce class w/32MB (Radeon 8500 or GeForce3 w/64MB highly recommended)
+		</ul>
+		</dd> 
+	<dt>Required Software:</b>
+		<dd>
+		<ul>
+			<li>Latest drivers for Video board
+			<li><a href="http://www.microsoft.com/directx/default.asp">DirectX</a> version 8.0 or later.
+			<li><a href="http://www.garagegames.com/docs/torque/gstarted/openal.html">OpenAL</a> Runtime or SDK Installation
+		</ul>
+		</dd>
+</dl>
+<p>
+
+<h4 id="mac">Mac OS</h4>
+<p>
+<dl>
+	<dt>Required Hardware:
+		<dd>
+		<ul>
+			<li>G3/G4 400Mhz (or better), 128MB RAM, 20+GB HD
+			<li>MacOS 9 or X
+			<li>AGP Radeon or GeForce class w/32MB (Radeon 8500 or GeForce3 w/64MB highly recommended)
+		</ul>
+		</dd> 
+	<dt>Required Software:</b>
+		<dd>
+		<ul>
+			<li>9: Latest DrawSprocket and InputSprocket libraries/extensions installed and active
+			<li>9&X: Latest drivers for Video board
+			<li>9&X: TCP/IP properly configured
+			<li>9&X: <a href="http://www.garagegames.com/docs/torque/gstarted/openal.html">OpenAL</a> Runtime or SDK Installation
+		</ul>
+		</dd>
+</dl>
+<p>
+
+<h4 id="unix">Linux</h4>
+<p>
+<dl>
+	<dt>Required Hardware:
+		<dd>
+		<ul>
+			<li>Pentium II/400 - AMD/400 (or better), 128+MB RAM
+			<li>NVIDIA 3D card recommended.  Other cards may work but 
+            are untested.
+		</ul>
+		</dd>
+	<dt>Required Software:</b>
+		<dd>
+		<ul>
+			<li>XFree86 4.0 or greater with a appropriate 3D drivers (GLX/DRI)
+            for your video card.
+            <li>Kernel 2.4.17 is not recommended.
+            <li>The prebuilt binary packages require the following dynamic
+            link libraries:
+                <ul>
+                  <li>libm.so.6
+                  <li>libdl.so.2
+                  <li>libpthread.so.0
+                  <li>libc.so.6
+                  <li>/lib/ld-linux.so.2
+                </ul>
+		</ul>
+		</dd>
+</dl>
+</p>
+
+
+<hr><h3 id="#runapp">Running the Application</h3>
+
+<p>The <i>RealmWars</i> demo application must be executed from the directory
+into which you unziped the download. Simply open up the folder with your
+browser and double click on the Running the <b>RealWars</b> app.
+
+<p>The demo may be run in two modes: with or without the client interface.
+Running the client graphics interface is the default behavior. Running
+the app. in "dedicated" mode skips the graphics and client interface
+initialization.  This mode is used to run dedicated game servers and
+consumes less resources, but is not directly playable.  You must connect
+to a dedicated server using another instances of the demo app running in
+client mode.  Example of dedicated mode using command line arguments:</p>
+<pre>
+	cd c:\demo_directory
+	RealmWars -dedicated -mission rw\data\missions\stronghold.mis
+</pre>
+
+<p>Games (servers) can also be hosted through the client interface, and a
+client may play the game being hosted.</p>
+
+<p><b>Note:</b> for Mac users, command line arguments can be placed
+in a text file called <i>maccmdline.txt</i> in the <i>example</i> directory.
+</p>
+
+
+<h4 id="synopsis">Command Line Arguments</h4>
+<p>
+torqueDemo
+[-fullscreen] [-windowed] [-noSound] [-openGL] [-directX]
+[-autoVideo] [-prefs file] [-dedicated]
+[-mission mission] [-log level] 
+[-mod modName] [-game gameName] [-show shapeFile]
+[-console] [-jSave file] [-jPlay file] [-jDebug file]
+[-help]
+</p>
+<p>
+<table>
+  <tr>
+    <td width=50>&nbsp;</td>
+    <td width=100>-fullscreen</td><td>Run in fullscreen mode</td>
+  </tr>
+  <tr>
+    <td></td><td>-windowed</td><td>Run in a window</td>
+  </tr>
+  <tr>
+    <td></td><td>-noSound</td><td>Dsisable sound</td>
+  </tr>
+  <tr>
+    <td></td><td>-openGL</td><td>Use the OpenGL driver</td>
+  </tr>
+  <tr>
+    <td></td><td>-directX</td><td>Use the DirectX driver</td>
+  </tr>
+  <tr>
+    <td></td><td>-autoVideo</td><td>Autodetect the video driver</td>
+  </tr>
+  <tr>
+    <td></td><td>-prefs</td><td>Load the given config file</td>
+  </tr>
+  <tr>
+    <td></td><td>-dedicated</td><td>Run as a dedicated server</td>
+  </tr>
+  <tr>
+    <td></td><td>-mission mission</td><td>Load the given mission.</td>
+  </tr>
+  <tr>
+    <td></td><td>-log level</td><td>Set the log level = [0,1,2]</td>
+  </tr>
+  <tr>
+    <td></td><td>-mod modName</td><td>Load the specified <a href="#mods">mod</a></td>
+  </tr>
+  <tr>
+    <td></td><td>-game gameName</td><td>Load the specified <a href="#mods">game</a>, clears all previously loaded mods</td>
+  </tr>
+  <tr>
+    <td></td><td>-show [file.dts]</td><td>Start the <a href="#tools">show</a> mod and optionally load the specified file</td>
+  </tr>
+  <tr>
+    <td></td><td>-console</td><td>Start up a seperate console window</td>
+  </tr>
+  <tr>
+    <td></td><td>-jSave file</td><td>Record a journal</td>
+  </tr>
+  <tr>
+    <td></td><td>-jPlay file</td><td>Play back a journal</td>
+  </tr>
+  <tr>
+    <td></td><td>-jDebug file</td><td>Same as jPlay, except that a debug
+    	break (int3) is issued when the journal ends</td>
+  </tr>
+  <tr>
+    <td></td><td>-help</td><td>Display this help to the console</td>
+  </tr>
+</table>
+</p>
+
+<h4 id='keys'>Key Bindings</h3>
+<p>
+The client default key bindings for fps (the default game). The script
+file which binds these keys can be found in
+the <i>torque/fps/client/scripts/default.bind.cs</i>
+file. Here are some of the current bindings:
+</p>
+<p>
+<table>
+  <tr>
+    <td width=50>&nbsp;</td>
+    <td width=100 spansize=2><b>Movement</b></td>
+  </tr>
+  <tr>
+    <td></td><td>w</td><td>Forward</td>
+  </tr>
+  <tr>
+    <td></td><td>s</td><td>Backward</td>
+  </tr>
+  <tr>
+    <td></td><td>a</td><td>Left</td>
+  </tr>
+  <tr>
+    <td></td><td>d</td><td>Right</td>
+  </tr>
+  <tr>
+    <td></td><td>space</td><td>Jump</td>
+  </tr>
+  <tr>
+    <td></td><td spansize=2><br><b>View Control</b></td>
+  </tr>
+  <tr>
+    <td></td><td>e</td><td>Zoom</td>
+  </tr>
+  <tr>
+    <td></td><td>r</td><td>Set Zoom FOV</td>
+  </tr>
+  <tr>
+    <td></td><td>TAB</td><td>First/Third person</td>
+  </tr>
+  <tr>
+    <td></td><td>alt c</td><td>Toggle between camera and player</td>
+  </tr>
+  <tr>
+    <td></td><td spansize=2><br><b>Chat Messaging</b></td>
+  </tr>
+  <tr>
+    <td></td><td>u</td><td>Send public chat message</td>
+  </tr>
+  <tr>
+    <td></td><td spansize=2><br><b>Misc. Functions</b></td>
+  </tr>
+  <tr>
+    <td></td><td>Ctrl-O</td><td>In-game options dialog</td>
+  </tr>
+  <tr>
+    <td></td><td>F1</td><td>In-game help dialog box</td>
+  </tr>
+  <tr>
+    <td></td><td>F2</td><td>Score board</td>
+  </tr>
+</table>
+</p>
+
+<!-------------------------------------------------------->
+<script>footer();</script>
+</body>
+</html>

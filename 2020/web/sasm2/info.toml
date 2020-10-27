@@ -1,0 +1,13 @@
+name = "SASM: Vote By Post"
+tags = ["pwn","web"]
+category = "pwn"
+difficulty = "medium"
+author = "itszn"
+state = "NE"
+description = """
+SASM is cool and all but it seems a little dangerous, huh. Luckily we can also use JavaScript to validate input before it even hits the binary!
+
+The flag for this challenge is at `/flagB`. Only the admin bot can read it.
+
+Note: You **do not** have to solve "SASM: Every Vote Counts" to solve this challenge!
+"""

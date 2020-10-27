@@ -1,0 +1,64 @@
+[1m--- a/src/signer.py
++++ b/src/signer.py[m
+[36m@@ -12,6 +12,7 @@[m [mdef get_elf_hash(b):[m
+ [m
+         hd = ''[m
+         hd += '%08x'%elf.header.e_entry[m
+[32m+[m[32m        hd += elf.header.e_type[m
+ [m
+         hd += 'SEGMENTS'[m
+         # Add program headers[m
+[36m@@ -23,6 +24,7 @@[m [mdef get_elf_hash(b):[m
+             hd += '%08x'%seg.header.p_vaddr[m
+             hd += '%08x'%seg.header.p_filesz[m
+             hd += '%08x'%seg.header.p_memsz[m
+[32m+[m[32m            hd += '%08x'%seg.header.p_flags[m
+ [m
+         # Add section headers[m
+         hd += 'SECTIONS'[m
+[36m@@ -40,6 +42,7 @@[m [mdef get_elf_hash(b):[m
+             hd += '%08x'%sec.header.sh_addr[m
+             hd += '%08x'%sec.header.sh_offset[m
+             hd += '%08x'%sec.header.sh_size[m
+[32m+[m[32m            hd += '%08x'%sec.header.sh_flags[m
+             hd += sec.data().decode('latin-1')[m
+ [m
+         if build_id is None:[m
+[1m--- a/src/protect.py
++++ b/src/protect.py[m
+[36m@@ -13,11 +13,23 @@[m [mdef check_elf(elf_path):[m
+ [m
+         entry = elf.header.e_entry[m
+ [m
+[32m+[m[32m        for segment in elf.iter_segments():[m
+[32m+[m[32m            if (segment.header.p_flags & 3) == 3:[m
+[32m+[m[32m                print "Segments must be W^X"[m
+[32m+[m[32m                exit(0)[m
+[32m+[m
+         text_sec = None[m
+         for section in elf.iter_sections():[m
+             if section.name == '.text':[m
+[32m+[m[32m                if text_sec is not None:[m
+[32m+[m[32m                    print "Multiple text sections"[m
+[32m+[m[32m                    exit(0)[m
+                 text_sec = section[m
+[31m-                break[m
+[32m+[m[32m            if (section.header.sh_flags & 5) == 5:[m
+[32m+[m[32m                print "Sections must be W^X"[m
+[32m+[m[32m                exit(0)[m
+[32m+[m
+[32m+[m
+ [m
+         if text_sec is None:[m
+             print "Could not find text section"[m
+[36m@@ -41,6 +53,10 @@[m [mdef check_elf(elf_path):[m
+     for i in md.disasm(text_data, len(text_data)):[m
+         print("0x%x:\t%s\t%s" %(i.address, i.mnemonic, i.op_str))[m
+ [m
+[32m+[m[32m        if '[' in i.op_str or ']' in i.op_str:[m
+[32m+[m[32m            print("Dereferences not allowed")[m
+[32m+[m[32m            exit(0)[m
+[32m+[m
+         if i.mnemonic.lower() == 'int3':[m
+             has_int3 = True[m
+             continue[m

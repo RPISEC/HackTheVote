@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block head %}
+  <title>.dotfile builder</title>
+  {{ super() }}
+{% endblock %}
+
+{% block content %}
+  <h1 class="title is-1" id="title">{{name}}</h1>
+  <pre class="textarea" id="text" contenteditable="true" spellcheck="false">{{ data }}</pre>
+  <button class="button is-fullwidth is-success" id="save">Save File</button>
+
+    <div class="modal" id="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title" style="margin-bottom:0">Save Dotfile?</p>
+          <button class="delete close-modal" aria-label="close"></button>
+        </header>
+        <footer class="modal-card-foot">
+          <div class="container">
+          <form action="/save" method="POST">
+            <div class="field">
+              <div class="control">
+                <input class="input" type="text" name="name" id="nameprompt" placeholder="Dotfile Name" required>
+                <input type="hidden" name="text" id="textbody">
+                <input type="hidden" name="_csrf_token" value="{{get_csrf_token()}}">
+                <input type="hidden" name="_id" value="{{session['_id']}}">
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column">
+              <button class="button is-success is-fullwidth">Save</button>
+              </div>
+              <div class="column">
+              <button class="button is-danger is-fullwidth close-modal">Cancel</button>
+              </div>
+            </div>
+            </form>
+            </div>
+          </div>
+      </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script src="/static/js/edit.js"></script>
+{% endblock %}
+

@@ -1,0 +1,9 @@
+name = "Social Isolation"
+tags = ["browser","pwn","web","thinking"]
+category = "browser"
+difficulty = "hard"
+author = "itszn"
+state = "NY"
+description = """
+With the advent of SASM, LoudFlare has introduced its new revolutionary product: Workers-x64! Now you can safely run assembly code from JavaScript without worrying about other users messing with your data. The future is now
+"""

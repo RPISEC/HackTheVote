@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="title is-1">Share a Link</h1>
+{% if bad %}
+<article class="message is-danger">
+  <div class="message-body">
+    <b>Sorry that link didn't look right :(</b>
+  </div>
+</article>
+{% endif %}
+{% if good %}
+<article class="message is-success">
+  <div class="message-body">
+    <b>Ok I'll check it out in a second!</b>
+  </div>
+</article>
+{% else %}
+  <div class="field">
+<p>Got some fun dotfile related content? Friends can send it my way below and I'll check it out when I get a chance:</p>
+  </div>
+<form method="POST">
+  <div class="field">
+    <div class="control">
+      <input class="input" name="url" placeholder="Cool URL">
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+    <button type="submit" class="button is-success is-fullwidth">Share</button>
+    </div>
+  </div>
+</form>
+{% endif %}
+<div class="level" style="margin-top: 25%">
+  <div class="level-item">
+    <p class="title is-size-1 has-text-grey-light">{{msg}}<span class="has-text-white-bis">{{white}}</span></p>
+  </div>
+</div>
+{% endblock %}

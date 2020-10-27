@@ -1,0 +1,9 @@
+name = "Voting Booth"
+tags = ["pwn"]
+difficulty = "medium"
+author = "sebel"
+state = "CO"
+description = """
+Paper ballots are too tough to count. So I made an electronic voting system.
+"""
+flag = "flag{3y3_sW34R_I_C0UntED_tH4t_Str1ng_L3Ngth}"

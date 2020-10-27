@@ -1,0 +1,14 @@
+name = "Caught in the (H)act"
+tags = ["forensics"]
+difficulty = "easy"
+author = "andrew"
+state = "MS"
+description = """
+We captured this PANDA recording of an attacker breaking into vote.gov. They posted a fake date for the election and now we can't get back in to fix it. Can you figure out what they changed?
+
+Technical details:
+Captured with github.com/panda-re/panda.
+Our server is a generic x86_64 setup with 1gb ram.
+If you want to be more precise, you could describe the OS as "linux-64-ubuntu:4.15.0-72-generic-noaslr-nokaslr".
+"""
+flag = "flag{time-2-take-down-e-voting}"

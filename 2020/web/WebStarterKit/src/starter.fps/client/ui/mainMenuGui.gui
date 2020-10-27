@@ -1,0 +1,89 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiChunkedBitmapCtrl(MainMenuGui) {
+   profile = "GuiContentProfile";
+   horizSizing = "width";
+   vertSizing = "height";
+   position = "0 0";
+   extent = "640 480";
+   minExtent = "8 8";
+   visible = "1";
+   bitmap = "./background";
+   useVariable = "0";
+   tile = "0";
+      helpTag = "0";
+
+   new GuiButtonCtrl() {
+      profile = "GuiButtonProfile";
+      horizSizing = "right";
+      vertSizing = "top";
+      position = "36 413";
+      extent = "110 20";
+      minExtent = "8 8";
+      visible = "1";
+      command = "quit();";
+      text = "Quit!";
+      groupNum = "-1";
+      buttonType = "PushButton";
+         helpTag = "0";
+   };
+   new GuiButtonCtrl() {
+      profile = "GuiButtonProfile";
+      horizSizing = "right";
+      vertSizing = "top";
+      position = "36 237";
+      extent = "110 20";
+      minExtent = "8 8";
+      visible = "1";
+      command = "Canvas.setContent(startMissionGui);";
+      text = "Start Mission...";
+      groupNum = "-1";
+      buttonType = "PushButton";
+         helpTag = "0";
+   };
+   new GuiButtonCtrl() {
+      profile = "GuiButtonProfile";
+      horizSizing = "right";
+      vertSizing = "top";
+      position = "36 264";
+      extent = "110 20";
+      minExtent = "8 8";
+      visible = "1";
+      command = "Canvas.setContent(JoinServerGui);";
+      text = "Join Server...";
+      groupNum = "-1";
+      buttonType = "PushButton";
+         helpTag = "0";
+   };
+   new GuiButtonCtrl() {
+      profile = "GuiButtonProfile";
+      horizSizing = "right";
+      vertSizing = "top";
+      position = "36 291";
+      extent = "110 20";
+      minExtent = "8 8";
+      visible = "1";
+      command = "Canvas.pushDialog(optionsDlg);";
+      text = "Options...";
+      groupNum = "-1";
+      buttonType = "PushButton";
+         helpTag = "0";
+   };
+   new GuiButtonCtrl() {
+      profile = "GuiButtonProfile";
+      horizSizing = "right";
+      vertSizing = "top";
+      position = "36 318";
+      extent = "110 20";
+      minExtent = "8 8";
+      visible = "1";
+      command = "getHelp(\"0. About\");";
+      text = "About...";
+      groupNum = "-1";
+      buttonType = "PushButton";
+         helpTag = "0";
+   };
+};
+//--- OBJECT WRITE END ---
+
+
+

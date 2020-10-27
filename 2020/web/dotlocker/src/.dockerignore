@@ -1,0 +1,7 @@
+*
+!server
+server/admin.pyc
+server/db.pyc
+!setup.sh
+!chrome.js
+!entrypoint.sh

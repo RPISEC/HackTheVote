@@ -1,0 +1,13 @@
+name = "Ballot Day"
+tags = ["reverse"]
+difficulty = "easy"
+author = "doom"
+state = "SC"
+description = """
+Its that time again, when all the citizens in positive standing with the local enforcement can participate in the greatest tradition of all times: Casting your vote! Hopefully it all goes smoothly and there are not any demerits in store for you...
+
+https://wargames.ret2.systems/a4bb1f1f332b5818262b/htv_2020
+
+(NOTE: the site itself is not in scope, just the binary running on it)
+"""
+flag = "flag{I am sure this is what the founding fathers envisioned}"

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <script>
+        window.location = "/playground?payload=nope";
+        setTimeout(() => {
+            {{ payload }}
+        }, 2000);
+    </script>
+{% endblock %}

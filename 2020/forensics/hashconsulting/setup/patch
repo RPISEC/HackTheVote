@@ -1,0 +1,14 @@
+diff --git a/src/pidfile.c b/src/pidfile.c
+index 7da26fa70..1fd60721f 100644
+--- a/src/pidfile.c
++++ b/src/pidfile.c
+@@ -109,7 +109,7 @@ static int check_running_process (hashcat_ctx_t *hashcat_ctx)
+ 
+       hcfree (pidbin);
+ 
+-      if (r == 0) return -1;
++      //if (r == 0) return -1;
+ 
+       return 0;
+     }
+

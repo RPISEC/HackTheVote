@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Georgia Voting app (BETA)</string>
+    <string name="prompt_username">Full name</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in to vote</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">Logged in successfully</string>
+    <string name="voted">Voted successfully</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_vote">VoteActivity</string>
+    <string name="abraham_lincoln">Abraham Lincoln</string>
+    <string name="george_washington">George Washington</string>
+    <string name="abstain">abstain</string>
+    <string name="select_vote">Please select an option</string>
+</resources>
