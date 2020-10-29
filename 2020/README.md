@@ -1,6 +1,6 @@
 # Hack The Vote 2020
 
-Hack The Vote 2020 was run by [RPISEC](https://rpis.ec) from September 23rd to 25th, 2020.
+Hack The Vote 2020 was run by [RPISEC](https://rpis.ec) from October 23rd to 25th, 2020 (2020-10-23T23:00Z/2020-10-25T23:00Z).
 
 ![challenges](challenges.png)
 
