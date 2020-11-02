@@ -1,0 +1,57 @@
+# Overview
+
+This is a reversing challenge across multiple layers of VMs (or IRs depending on your perogative). The highest layer contains a vulnerability that you can exploit to leak the flag out of its memory. The source code for this highest layer is plain old C and can be viewed at `src/pwnable.c`. It gets compiled a few times and eventually the rootkit binary is distributed.
+
+This assumes an environment variable VOTERFRAUD_SRC that contains `pwnable.c` which can be found under the `src` subdirectory. Let's go ahead and set this up like:
+    export VOTERFRAUD_SRC=/tmp/voterfraud ; mkdir ${VOTERFRAUD_SRC} ; cp src/pwnable.c ${VOTERFRAUD_SRC} ; cd ${VOTERFRAUD_SRC}
+
+# Compilation (C -> EIR)
+
+We'll use the [Esoteric Language Virtual Machine compiler project](https://github.com/shinh/elvm) to compile into a very simple IR known as EIR (ELVM IR). This represents a machine with only a few registers and essentially the barebones of instructions.
+
+## Building the ELVM Project
+Simply type `git clone https://github.com/shinh/elvm.git ; cd elvm ; make` 
+
+## Generating the Next Layer
+Now that our tools our built, we can invoke them to obtain the EIR output. We'll be using the elvm-specific 8cc (which emits EIR). Invoke like so:
+    out/8cc -S ${VOTERFRAUD_SRC}/pwnable.c ; mv pwnable.s ${VOTERFRAUD_SRC}/pwnable.c.eir
+
+
+# Compilation (EIR -> WM)
+Now we'll be using one of the specific elvm targets (or backends) which take EIR as source. The one we'll cover is the [W-Machine](https://en.wikipedia.org/wiki/Wang_B-machine) which can be found at [target/wm.c](https://github.com/shinh/elvm/blob/master/target/wm.c).
+
+## Generating the Next Layer
+Invoke the W-Machine backend like so:
+    out/elc -wm ${VOTERFRAUD_SRC}/pwnable.c.eir > ${VOTERFRAUD_SRC}/pwnable.c.eir.wm
+
+# Compilation (WM -> C)
+We're almost done. This is the last stage using ghetto compilers. This one uses rust (protip: install rust). Let's build the compiler.
+
+## Building the wmc Compiler
+This is stored as a tool in the elvm source directory. Build with the following incantation:
+    cd tools/wmc ; cargo build
+
+## Generating the Next Layer
+This one is very tightly coupled with the next (and final) step. This is because this phase generates bytecode to be interpreted by the following phase. This sounds advanced but you'll chuckle when you peek at the source.
+
+Anyway, to make a long story short there's a bit of prep work that only pays off next. Build with the following spell:
+    cp -r src/crt ${VOTERFRAUD_SRC}/ ; mv ${VOTERFRAUD_SRC}/crt ${VOTERFRAUD_SRC}/pwnable.c.eir.wm.c
+    cargo run -- -s ${VOTERFRAUD_SRC}/pwnable.c.eir.wm -o ${VOTERFRAUD_SRC}/pwnable.c.eir.wm.c
+
+Yes, this is going to take some time. It will emit a file named `Program.h` if you're curious.
+
+For (slightly) more information about `wmc` consult `tools/wmc/README`.
+
+# Compilation (C -> native)
+Finally, we have arrived. We can now use a real compiler. This will generate the native binary and is at the point where the resulting binary could be packaged up and handed out to players.
+
+## Generating the Final Layer
+Simple close your eyes and invoke:
+    cd ${VOTERFRAUD_SRC}/pwnable.c.eir.wm.c ; make
+
+Now take a nap because this will take a bit. At the end you should have a binary named `wm`. Let's finish off with:
+    mv ${VOTERFRAUD_SRC}/pwnable.c.eir.wm.c/wm ${VOTERFRAUD_SRC}/rootkit
+
+# Notes
+
+The various stages will likely be a bit different. I made some modifications to 8cc to make the output a little nicer. Not sure what I did, how it worked, or the effects but I have a memory that it was helpful. That is enough for me. Feel free to diff each stage with the source in this very directory to find out more.
