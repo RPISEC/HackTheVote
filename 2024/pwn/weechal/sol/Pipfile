@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pwntools = "==4.13.1"
+pwntools = "==4.3.1"
 leb128 = "*"
 
 [dev-packages]
