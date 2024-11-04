@@ -1,0 +1,11 @@
+name = "Comma Club"
+tags = ["pwn"]
+category = "pwn"
+author = "Michael (Jeff)"
+state = "WY"
+description = """
+We need somone to run our vote tallying machine, and it needs to be someone
+trustworthy. Apparently there's some problem if a candidate gets too many votes.
+Shouldn't be a problem for us in Wyoming though.
+"""
+flag = "flag{w3lc0me_2_TH3_2_c0mm4_c1ub}"

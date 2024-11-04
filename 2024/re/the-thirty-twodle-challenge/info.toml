@@ -1,0 +1,11 @@
+name = "The Thirty Twodle Challenge"
+tags = ["re"]
+category = "re"
+author = "glenns"
+state = "PA"
+description = """
+We found the source of our opponent's fake news generator, but our crack team
+of interns got side tracked playing the -dles! Can you crack this disinformation
+machine and help us predict their each and every future story?
+"""
+flag = "flag{my_opening_words_are_stare_and_doing_wbu}"

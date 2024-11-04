@@ -1,0 +1,12 @@
+name = "weechal"
+tags = ["pwn"]
+category = "pwn"
+author = "glenns"
+state = "IL"
+description = """
+After we showed our opponents the dangers of modern communications platforms,
+they swore to return to more primitive messaging services.
+Unfortunately for them, we conned their logistics department into using
+our special version of this chat client, with a couple surprise modifications.
+"""
+flag = "flag{i_cant_believe_i_had_to_patch_out_checks_in_an_api_that_takes_pointers_over_the_wire}"

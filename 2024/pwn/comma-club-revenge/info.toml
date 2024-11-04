@@ -1,0 +1,11 @@
+name = "Comma Club Revenge"
+tags = ["pwn"]
+category = "pwn"
+author = "Michael (Jeff), revenge patch by negasora"
+state = "ND"
+description = """
+We need someone to run our vote tallying machine, and it needs to be someone
+trustworthy. Apparently there's some problem if a candidate gets too many votes.
+Shouldn't be a problem for us in North Dakota though.
+"""
+flag = "flag{W3lc0Me_t0_TH3_gr34t3r_th4N_0n3_c0Mm4_c1Ub}"

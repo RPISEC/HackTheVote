@@ -1,0 +1,10 @@
+name = "graph 2"
+tags = ["forensics", "web"]
+author = "Lense"
+state = "SC"  # Adjacent to graph 1
+description = """
+Retrieve the admin's flag2.png.
+
+Continue from graph 1.
+"""
+flag = "flag{extreme_csv_parsing}"

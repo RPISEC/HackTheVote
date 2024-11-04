@@ -1,0 +1,33 @@
+diff --exclude .idea -ru weechat-3.4 copy/src/gui/gui-buffer.c weechat-3.4/src/gui/gui-buffer.c
+--- weechat-3.4 copy/src/gui/gui-buffer.c	2021-12-18 02:57:32
++++ weechat-3.4/src/gui/gui-buffer.c	2024-10-22 20:46:34
+@@ -926,7 +926,7 @@
+     }
+ 
+     /* buffer not found */
+-    return 0;
++    return 1;
+ }
+ 
+ /*
+diff --exclude .idea -ru weechat-3.4 copy/src/plugins/relay/weechat/relay-weechat-protocol.c weechat-3.4/src/plugins/relay/weechat/relay-weechat-protocol.c
+--- weechat-3.4 copy/src/plugins/relay/weechat/relay-weechat-protocol.c	2021-12-18 02:57:32
++++ weechat-3.4/src/plugins/relay/weechat/relay-weechat-protocol.c	2024-10-22 20:40:43
+@@ -83,7 +83,7 @@
+                                               ptr_buffer))
+             {
+                 /* invalid pointer! */
+-                ptr_buffer = NULL;
++                /* ptr_buffer = NULL; */
+             }
+         }
+     }
+@@ -658,7 +658,7 @@
+      * main loop (some commands like /upgrade executed now can cause
+      * a crash)
+      */
+-    weechat_hashtable_set (options, "delay", "1");
++    weechat_hashtable_set (options, "delay", "0");
+ 
+     /* execute the command, with the delay */
+     weechat_command_options (ptr_buffer, pos, options);

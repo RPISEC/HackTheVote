@@ -1,0 +1,1 @@
+exec("impor" "t kernel_ffi as k; buf = k.kmalloc(1024); memset(buf, 0, 1024); f = filp_ope" + "n('flag', 0, 0); kernel_read(f, buf, 128, 0); print(k.str(buf))")

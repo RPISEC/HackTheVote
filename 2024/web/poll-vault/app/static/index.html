@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Forecast 2024</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+.jumbotron {
+    background-color: #00274d;
+    margin-bottom: 0;
+}
+
+header {
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #00274d;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.section {
+    padding: 40px 20px;
+    border-top: 3px solid #ffcc00;
+    border-bottom: 3px solid #ffcc00;
+    margin-bottom: 40px;
+}
+
+.section h2 {
+    font-size: 3em;
+    font-weight: 700;
+    color: #00274d;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #ffcc00;
+    color: #00274d;
+    padding: 15px 30px;
+    border: none;
+    font-size: 1.4em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #ffd633;
+    transform: scale(1.05);
+}
+
+.form-section input[type="text"] {
+    width: 80%;
+    padding: 20px;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+}
+
+.waiting-status {
+    display: none;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #777;
+}
+
+.conversation-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.conversation-entry {
+    margin-bottom: 25px;
+    word-wrap: break-word;
+}
+
+.conversation-entry.user {
+    text-align: right;
+    font-weight: bold;
+    color: #00274d;
+    background-color: #e0f7fa;
+    border-radius: 12px;
+    padding: 15px;
+    max-width: 70%;
+    margin-left: auto;
+}
+
+.conversation-entry.ai {
+    text-align: left;
+    color: #333;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 15px;
+    max-width: 70%;
+    margin-right: auto;
+}
+
+.testimonials {
+    background-color: #e9ecef;
+    padding: 40px;
+    border-top: 3px solid #ffcc00;
+    border-bottom: 3px solid #ffcc00;
+}
+
+footer {
+    background-color: #00274d;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.about-content,
+.team-content,
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+    line-height: 1.8;
+    font-size: 1.2em;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.team-member img {
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+blockquote {
+    font-size: 1.3em;
+    font-style: italic;
+    border-left: 5px solid #ffcc00;
+    padding-left: 20px;
+    margin-bottom: 40px;
+}
+
+blockquote p {
+    margin-bottom: 0;
+}
+
+#exampleQuestions {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #00274d;
+    margin-top: 40px;
+    text-align: left;
+}
+
+#exampleList {
+    padding-left: 0;
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+#exampleList .list-group-item {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+    font-size: 1.1em;
+}
+
+#exampleList .list-group-item:hover {
+    background-color: #e9ecef;
+}
+
+#message {
+    transform: 1s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 50px 20px;
+    }
+
+    .form-section input[type="text"] {
+        width: 100%;
+    }
+
+    .cta-button {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .team-member {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .team-member img {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    nav a {
+        margin: 0 10px;
+        font-size: 0.9em;
+    }
+}
+    </style>
+</head>
+<body>
+    <header class="jumbotron jumbotron-fluid text-white">
+        <div class="container">
+            <h1 class="display-4">Discover the Future Before It Happens!</h1>
+            <p class="lead">Experience the thrill of predicting election results with AI-powered insights.</p>
+            <button class="cta-button mt-4">Ask the Forecaster</button>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Election Forecast 2024</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#ask">Ask a Question</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#how-it-works">How It Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Our Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="ask" class="section container form-section">
+        <h2 class="text-center mb-5 display-4">Ask the Forecaster</h2>
+        <div class="conversation-container" id="conversation">
+            <div id="message"></div>
+            <div id="waitingStatus" class="waiting-status">
+                <i class="fas fa-spinner fa-spin center"></i> Launching the forecaster and asking your question...
+            </div>
+            <div class="text-center small text-muted">This is a free trial. You will be rate limited unless you buy a professional subscription.</div>
+            <form id="aiForm" class="text-center mt-5">
+                <input type="text" class="form-control d-inline-block" id="userInput" placeholder="Ask me anything about the upcoming election!" autocomplete="off" required>
+                <button type="submit" class="cta-button mt-3" id="submitBtn">Submit</button>
+            </form>
+            <p id="exampleQuestions">Example Questions:</p>
+            <ul id="exampleList" class="list-group">
+                <li class=""list-group-item">Who is leading in the latest polls?</li>
+                <li class=""list-group-item">Which regions are most likely to swing?</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="testimonials section container">
+        <h2 class="text-center mb-5 display-4">What People Are Saying</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-0">"The AI made me feel like a campaign insider."</p>
+                    </blockquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-0">"The accuracy and fun I had with this simulator were amazing!"</p>
+                    </blockquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-0">"I learned so much about how campaigns work and what can influence voters."</p>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="section container">
+        <h2 class="text-center mb-5 display-4">How Does Our Election Forecasting Work?</h2>
+        <div>
+            <h3>1. Data-Driven Insights</h3>
+            <p>Our AI uses dynamic polling data, sentiment analysis, and voting history to predict outcomes. We leverage large datasets to continuously refine our predictions, providing the most accurate forecasts available.</p>
+            <h3>2. Realistic Simulations</h3>
+            <p>We simulate voting patterns to predict results in real-time. Our model runs thousands of scenarios to understand how changes in voter sentiment could impact the outcome of the election.</p>
+            <h3>3. Your Questions Answered</h3>
+            <p>Have a question? Our AI will provide insights instantly. We provide actionable information to help you understand the electoral process and make informed predictions.</p>
+        </div>
+    </section>
+    
+    <section id="about" class="section container">
+        <h2 class="text-center mb-5 display-4">About Us</h2>
+        <div class="about-content">
+            <p>At Election Forecast 2024, we are dedicated to leveraging the power of artificial intelligence to bring transparency and understanding to the electoral process. Our mission is to empower citizens, researchers, and enthusiasts not only across the nation but also right here in Georgia with the most advanced tools available to explore electoral dynamics in real-time. By combining our AI-driven platform with our commitment to integrity, we aim to help everyone stay informed and engaged with the electoral process.</p>
+
+            <p>Founded by a team of data scientists, political analysts, and technologists from Atlanta, GA, we know that the path to a thriving democracy starts with accessible information. We bring our expertise to the forefront by designing a platform that combines sophisticated algorithms with easy-to-understand visualizations, making even the most complex electoral data clear and approachable. From local races to national trends, our custom tools are designed to equip every Georgian—and every citizen—with the insights needed to make informed decisions that shape the future.</p>
+        </div>
+    </section>
+    
+    <section id="team" class="section container">
+        <h2 class="text-center mb-5 display-4">Our Team</h2>
+        <div class="team-content">
+            <div class="team-member">
+                <img src="static/jane.png" alt="Jane Doe, CEO" width="100" height="100">
+                <div>
+                    <h3>Jane Doe - CEO & Founder</h3>
+                    <p>Jane is a visionary leader with a passion for technology and democracy. With over 20 years of experience in data science and AI, she founded Election Forecast 2024 to create a positive impact in political engagement.</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="static/john.png" alt="John Smith, CTO" width="100" height="100">
+                <div>
+                    <h3>John Smith - Chief Technology Officer</h3>
+                    <p>John is the architect behind our AI forecasting engine. His expertise in machine learning and large-scale systems ensures that our simulations are fast, reliable, and accurate.</p>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="static/emily.png" alt="Emily Brown, Data Analyst" width="100" height="100">
+                <div>
+                    <h3>Emily Brown - Lead Data Analyst</h3>
+                    <p>Emily is responsible for gathering and interpreting the data that drives our forecasts. She brings her extensive background in political science and statistics to the team, ensuring our insights are grounded in real-world dynamics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="section container">
+        <h2 class="text-center mb-5 display-4">Contact Us</h2>
+        <div class="contact-content">
+            <p>We would love to hear from you! Whether you have questions about our forecasts, partnership opportunities, or media inquiries, please reach out to us.</p>
+            <p>Address: 123 Democracy Lane, Suite 1234, Washington, DC 20001</p>
+        </div>
+    </section>
+
+    <section id="case-studies" class="section container">
+        <h2 class="text-center mb-5 display-4">Case Studies</h2>
+        <div class="about-content">
+            <p>Our Election Forecast platform has successfully predicted key election outcomes in previous cycles, both in Georgia and across the nation. Learn how our data-driven insights influenced campaign strategies, media coverage, and public perception.</p>
+
+            <h3>Case Study 1: The 1948 Three Governors Controversy</h3>
+            <p>Georgia unexpectedly found itself with three simultaneous claimants to the governor's office in 1948. Our platform's predictive insights were invaluable for citizens trying to understand who was really in charge, helping to demystify one of Georgia's most bizarre political sagas.</p>
+
+            <h3>Case Study 2: The 1985 Wild Turkey Election</h3>
+            <p>Our Election Forecast platform provided critical insights during Georgia's &quot;turkey tally,&quot; allowing voters to track the hunting-based &quot;results&quot; in real time. Our unique data visualizations even predicted which side would bag the most turkeys, ensuring accurate results in one of Georgia's wildest elections.</p>
+
+            <h3>Case Study 3: The 1922 Goat Vote</h3>
+            <p>In an unexpected twist, our platform followed the legendary Georgia &quot;Goat Vote&quot; in 1922, where a candidate of the four-legged variety gave traditional politicians a run for their money. Our data tracked Billy's grassroots surge, showing that a little humor—and a goat—could make a big impact in local politics.</p>
+        </div>
+    </section>
+
+    <section id="partnerships" class="section container">
+        <h2 class="text-center mb-5 display-4">Partnership Opportunities</h2>
+        <div class="about-content">
+            <p>Partner with us to leverage cutting-edge election forecasting technology. Whether you're a media organization, a campaign team, or an academic institution, our platform provides the tools you need for data-driven insights.</p>
+            <p>We offer partnership packages that include exclusive data access, custom reporting, and dedicated support to help you make the most informed decisions possible.</p>
+        </div>
+    </section>
+
+    <footer class="mt-5">
+        <div class="container">
+            <p class="text-center">&copy; 2024 Election Forecast. All rights reserved.</p>
+            <p class="text-center"><a href="#">Privacy Policy</a> | <a href="#">Contact Us</a></p>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#aiForm').on('submit', function(event) {
+                event.preventDefault(); // Prevent form from reloading page
+                const userInput = $('#userInput').val().trim();
+                if (userInput) {
+                    $('#submitBtn').prop('disabled', true);
+                    $('#waitingStatus').show();
+                    $('#exampleQuestions').hide();
+                    $('#exampleList').hide();
+                    $('#message').hide();
+                    $('#message').html("");
+
+                    // Perform proof-of-work calculation
+                    const complexity = 4; // Adjustable complexity
+                    let timestamp = new Date().getTime();
+                    let nonce = 0;
+                    let hash = '';
+                    do {
+                        nonce++;
+                        hash = CryptoJS.SHA256(userInput + timestamp + nonce).toString();
+                    } while (hash.substring(0, complexity) !== Array(complexity + 1).join('0'));
+
+                    const proofOfWork = { question: userInput, nonce: nonce, timestamp: timestamp, complexity: complexity };
+
+                    fetch('/predict', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(proofOfWork)
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        const userEntry = $('<div></div>').addClass('conversation-entry user').text(userInput);
+                        const aiEntry = $('<div></div>').addClass('conversation-entry ai').text(data.answer);
+                        $('#message').html(userEntry[0].outerHTML + aiEntry[0].outerHTML);
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        const errorEntry = $('<div></div>').addClass('conversation-entry ai').text('No response from the forecaster. Please try again later.');
+                        $('#message').html(errorEntry[0].outerHTML);
+                    })
+                    .finally(() => {
+                        $('#waitingStatus').hide();
+                        $('#submitBtn').prop('disabled', false);
+                        $('#userInput').val('');
+                        $('#message').show();
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

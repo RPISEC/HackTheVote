@@ -1,0 +1,58 @@
+{% extends "base.jinja" %}
+{% block title %}graph{% endblock %}
+{% block content %}
+      <p>
+        welcome to the graphing page
+      </p>
+      {% if result -%}
+      <h2>result</h2>
+      <p>
+        <img src="getfile/{{ result|e }}" alt="graph of {{ result|e }}"/>
+      </p>
+      {% endif -%}
+      <h2>render a graph</h2>
+      <p>
+        <form class="ui form" enctype="multipart/form-data" method="post">
+          <div class="two fields">
+            <div class="field">
+              <label>input file</label>
+              <select class="ui fluid dropdown" name="in">
+                <option value="">file</option>
+                {%- for filename in filenames %}
+                <option value="{{ filename|e }}">{{ filename|e }}</option>
+                {%- endfor %}
+              </select>
+            </div>
+            <div class="field">
+              <label>output file</label>
+              <div class="ui right labeled input">
+                <input type="text" name="out" placeholder="out">
+                <div class="ui basic label">.png</div>
+              </div>
+            </div>
+          </div>
+          <div class="fields inline">
+            <label for="points">points:</label>
+            <div class="field">
+              <div class="ui radio">
+                <input type="radio" id="contactChoice1" name="points" value="points" checked>
+                <label for="contactChoice1">points</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio">
+                <input type="radio" id="contactChoice2" name="points" value="lines">
+                <label for="contactChoice2">lines</label>
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui radio">
+                <input type="radio" id="contactChoice3" name="points" value="linespoints">
+                <label for="contactChoice3">linespoints</label>
+              </div>
+            </div>
+          </div>
+          <input class="ui button" type=submit value=upload>
+        </form>
+      </p>
+{%- endblock %}

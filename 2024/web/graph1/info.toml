@@ -1,0 +1,15 @@
+name = "graph 1"
+tags = ["web"]
+author = "Lense"
+state = "NC"
+description = """
+Retrieve the admin's flag1.csv.
+
+Hints:
+
+- No online buteforcing is required.
+- sandbox.sh is not relevant to the challenge.
+- Flags are in the normal format (`flag{...}`), but they aren't textual.
+"""
+flag = "flag{contrived_scenario}"
+category = "web"

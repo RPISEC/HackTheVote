@@ -1,0 +1,26 @@
+{% extends "base.jinja" %}
+{% block title %}data{% endblock %}
+{% block content %}
+      <p>
+        welcome to the data page
+      </p>
+      <h2>upload new data</h2>
+      <p>
+        <form enctype="multipart/form-data" method="post">
+          <input type="file" name="csv" accept=".csv,text/csv">
+          <input type=submit value=upload>
+        </form>
+      </p>
+      <h2>uploaded data</h2>
+      <p>
+        <ul>
+        {%- for filename in filenames %}
+          <li>
+            {% if request.args.get('filename') == filename %}<b>{% endif -%}
+            <a href="getfile/{{ filename|e }}">{{ filename|e }}</a>
+            {%- if request.args.get('filename') == filename %}</b>{% endif %}
+          </li>
+        {%- endfor %}
+        </ul>
+      </p>
+{%- endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.jinja" %}
+{% block title %}index{% endblock %}
+{% block content %}
+      <p>
+        welcome to my test graphing site I wrote to help visualize some polling data. I can never remember the syntax for gnuplot, so I made a small webapp to graph things for me. You are also welcome to use it :)
+      </p>
+      <p>
+        <a href="source">source code</a>
+      </p>
+{%- endblock %}
+{% block unauthed %}
+      <p>
+        welcome to my test graphing site I wrote to help visualize some polling data. I can never remember the syntax for gnuplot, so I made a small webapp to graph things for me. You are also welcome to use it :) log in first
+      </p>
+{%- endblock %}

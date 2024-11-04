@@ -1,0 +1,11 @@
+name = "Poll Vault"
+tags = ["web"]
+author = "Andrew"
+state = "GA"
+description = """
+Welcome to Election Forecast 2024, where we've trained a cutting-edge artificially intelligent system to get you up to speed on all
+things election-related! Do you crunch polls for breakfast? Have you dreamed of calling an election before the major media outlets?
+Well, now's your chance!
+"""
+flag = "flag{D@nger0us_d@tabase}"
+category = "web"

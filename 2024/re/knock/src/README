@@ -1,0 +1,12 @@
+compiles on FreeBSD 14.1
+
+note that the program blocks incoming SSH, so make sure you have terminal access to the host.
+
+deployment host setup:
+
+1. FreeBSD 14.1
+2. edit /etc/rc.conf
+	pf_enable=YES
+	ifconfig_ena0_name="vtnet0"  # edit ena0 to be the interface name. the challenge hardcodes vtnet0
+3. kldload pf
+4. as root, `FLAG=flag{...} nohup ./knock &`

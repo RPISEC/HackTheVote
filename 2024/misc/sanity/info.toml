@@ -1,0 +1,7 @@
+name = "sanity"
+category = "sanity"
+state = "AK"
+description = """
+flag{w3lc0m3_t0_h4ck_th3_v0t3}
+"""
+flag = "flag{w3lc0m3_t0_h4ck_th3_v0t3}"

@@ -1,0 +1,1 @@
+flag{i_cant_believe_i_had_to_patch_out_checks_in_an_api_that_takes_pointers_over_the_wire}

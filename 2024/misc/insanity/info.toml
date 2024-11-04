@@ -1,0 +1,8 @@
+name = "insanity"
+category = "insanity"
+state = "HI"
+# -2 points
+description = """
+flag{this_will_actually_take_points_away_but_its_funny}
+"""
+flag = "flag{this_will_actually_take_points_away_but_its_funny}"

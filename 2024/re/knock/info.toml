@@ -1,0 +1,9 @@
+name = "knock"
+author = "Lense"
+flag = "flag{who's there? you, apparently}"
+state = "MI"
+tags = ["re"]
+description = """
+This state uses a port knocking scheme to add "extra security" to their voting infrastructure. We found a copy of the binary they use to implement it. Connect to the listener and get the flag.
+"""
+category = "re"

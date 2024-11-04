@@ -1,0 +1,9 @@
+name = "ZeroVote"
+author = "Avi"
+flag = "flag{west_copper_north_north_iron_west_stone}"
+state = "NV"
+tags = ["crypto"]
+description = """
+This is a challenge from aweinstock
+"""
+category = "crypto"

@@ -1,0 +1,15 @@
+#!/bin/bash -x
+
+#mkdir -p /home/challenge_user/weechat
+
+D=$(mktemp -d)
+
+/weechat/bin/weechat-headless --dir $D -r "/set relay.network.password ctf;/relay add unix.weechat $D/unix.sock" > $D/exec.log 2>&1 &
+
+while [ ! -S "$D/unix.sock" ]; do
+    sleep 0.1
+done
+
+socat - UNIX-CONNECT:$D/unix.sock
+
+kill -9 %1

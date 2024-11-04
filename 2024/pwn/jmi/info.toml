@@ -1,0 +1,10 @@
+name = "JMI"
+tags = ["pwn"]
+category = "pwn"
+author = "negasora"
+state = "TX"
+description = """
+You've heard of "Just In Time" compilation, but what about "Just Missed It" compilation?
+We're bringing you all the overhead of compilation without ANY of the benefits.
+"""
+flag = "flag{Cl053_0nly_C0unT5_1n_h0r535h035_4nd_h4Ndwr1tt3n_4553mBlY}"

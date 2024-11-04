@@ -1,0 +1,9 @@
+name = "small snake"
+author = "wait_what"
+flag = "flag{its_like_rust_in_the_kernel_but_better}"
+state = "WI"
+tags = ["sandbox"]
+description = """
+The flag is in /flag
+"""
+category = "forensics"

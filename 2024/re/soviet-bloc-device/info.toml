@@ -1,0 +1,9 @@
+name = "Soviet Bloc Device"
+tags = ["re"]
+category = "re"
+author = "polarbits"
+state = "MD"
+description = """
+We found this sitting on one of our voting machines. Seems someone broke in and has been stealing CPU cycles, but we can't figure out the what or why.
+"""
+flag = "flag{b00m_t3tr1s}"

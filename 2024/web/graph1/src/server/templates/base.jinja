@@ -1,0 +1,51 @@
+{% macro nav_entry(name) -%}
+<a href="{{ url_for(name) }}" class="item{% if url_for(request.endpoint) == url_for(name) %} active{% endif %}">{{ name }}</a>
+{%- endmacro -%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{%- block head %}
+  <link rel="stylesheet" href="static/semantic.css" />
+  <title>{% block title %}{% endblock %}</title>
+{% endblock -%}
+</head>
+<body>
+  <div class="ui menu">
+    <div class="header item">Graph Utilities</div>
+    {{ nav_entry("index") }}
+    {{ nav_entry("data") }}
+    {{ nav_entry("graph") }}
+    <div class="right menu">
+      {%- if session.user %}
+      <a href="{{ url_for("signout") }}" class="item">sign out</a>
+      {%- else %}
+      <a href="{{ url_for("signin") }}" class="item">sign in</a>
+      {%- endif %}
+    </div>
+  </div>
+  <div class="ui container">
+    {%- with messages = get_flashed_messages() -%}
+    {% if messages %}
+    <div id="notifications">
+      {% for message in messages %}
+      <div class="ui negative message">
+        {# You can XSS this with gnuplot errors. I think that's fine, and idk an easy way to fix it while allowing <pre> #}
+        <p>{{ message }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {%- endwith %}
+    <div id="content">
+      <h1>{{ self.title() }}</h1>
+      {%- if authed -%}
+      {%- block content %}{% endblock %}
+      {%- else %}
+      {%- block unauthed %}
+      <p>please sign in</p>
+      {%- endblock %}
+      {%- endif %}
+    </div>
+  </div>
+</body>
+</html>
